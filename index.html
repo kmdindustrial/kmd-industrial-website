@@ -860,9 +860,8 @@
     <div class="contact-grid">
 
       <!-- Form -->
-      <form action="https://formspree.io/f/mrewegwg" method="POST">
+      <form id="rfqForm" action="https://formspree.io/f/mrewegwg" method="POST">
       <input type="hidden" name="_subject" value="New RFQ from KMD Industrial Equipment Website">
-      <input type="hidden" name="_next" value="https://kmd-industrial.pages.dev/thank-you.html">
       <div>
         <span class="section-eyebrow">Get In Touch</span>
         <h2 class="section-title">Request a Quote or Technical Consultation</h2>
@@ -899,16 +898,10 @@
           <label for="f-brand">Brand / Product of Interest</label>
           <select id="f-brand" name="product_interest">
             <option value="" disabled selected>Select a brand / product category</option>
-            <option>WEG — W21 High Efficiency Low Voltage Motor</option>
-            <option>WEG — HGF Series Flameproof Motor (ATEX)</option>
-            <option>WEG — W60 Medium Voltage Motor</option>
-            <option>VEM — DKR Air-to-Air Cooled Motor</option>
-            <option>VEM — DKK Air-to-Water Cooled Motor</option>
-            <option>VEM — DKC High Voltage Motor</option>
-            <option>Xylem Lowara — e-SV Multistage Pump</option>
-            <option>Xylem Lowara — eSHS/SH End-Suction Pump</option>
-            <option>Xylem Flygt — Submersible Pump</option>
-            <option>Other / Custom Inquiry</option>
+            <option value="WEG Motor">WEG Motors</option>
+            <option value="VEM Motor">VEM Motors</option>
+            <option value="Xylem Pump">Xylem Pumps</option>
+            <option value="Custom Inquiry">Custom Inquiry</option>
           </select>
         </div>
         <div class="form-group">
@@ -1146,6 +1139,40 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+/* RFQ Form Submit */
+const rfqForm = document.getElementById("rfqForm");
+
+rfqForm.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const submitBtn = document.getElementById("submitBtn");
+
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = "Sending...";
+
+  try {
+    const response = await fetch(rfqForm.action, {
+      method: "POST",
+      body: new FormData(rfqForm),
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (response.ok) {
+      window.location.href = "/thank-you.html";
+    } else {
+      alert("Submission failed. Please try again.");
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = "Send Inquiry";
+    }
+
+  } catch (error) {
+    alert("Network error. Please try again.");
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = "Send Inquiry";
+  }
+});
 </script>
 
 <!-- WhatsApp Float Button -->
