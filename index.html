@@ -860,6 +860,9 @@
     <div class="contact-grid">
 
       <!-- Form -->
+      <form action="https://formspree.io/f/mrewegwg" method="POST">
+      <input type="hidden" name="_subject" value="New RFQ from KMD Industrial Equipment Website">
+      <input type="hidden" name="_next" value="https://kmd-industrial.pages.dev/thank-you.html">
       <div>
         <span class="section-eyebrow">Get In Touch</span>
         <h2 class="section-title">Request a Quote or Technical Consultation</h2>
@@ -867,34 +870,34 @@
         <div class="form-row">
           <div class="form-group">
             <label for="f-fname">First Name *</label>
-            <input type="text" id="f-fname" placeholder="John">
+            <input type="text" id="f-fname" name="first_name" placeholder="John" required>
           </div>
           <div class="form-group">
             <label for="f-lname">Last Name *</label>
-            <input type="text" id="f-lname" placeholder="Smith">
+            <input type="text" id="f-lname" name="last_name" placeholder="Smith">
           </div>
         </div>
         <div class="form-group">
           <label for="f-email">Business Email *</label>
-          <input type="email" id="f-email" placeholder="kmd.sales.equip@gmail.com">
+          <input type="email" id="f-email" name="email" placeholder="name@company.com" required>
         </div>
         <div class="form-group">
           <label for="f-company">Company Name *</label>
-          <input type="text" id="f-company" placeholder="Your Company Ltd.">
+          <input type="text" id="f-company" name="company" placeholder="Your Company Ltd." required>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="f-country">Country</label>
-            <input type="text" id="f-country" placeholder="e.g. Saudi Arabia">
+            <input type="text" id="f-country" name="country">
           </div>
           <div class="form-group">
             <label for="f-phone">Phone / WhatsApp</label>
-            <input type="text" id="f-phone" placeholder="+966 ...">
+            <input type="text" id="f-phone" name="phone">
           </div>
         </div>
         <div class="form-group">
           <label for="f-brand">Brand / Product of Interest</label>
-          <select id="f-brand">
+          <select id="f-brand" name="product_interest">
             <option value="" disabled selected>Select a brand / product category</option>
             <option>WEG — W21 High Efficiency Low Voltage Motor</option>
             <option>WEG — HGF Series Flameproof Motor (ATEX)</option>
@@ -910,15 +913,23 @@
         </div>
         <div class="form-group">
           <label for="f-msg">Project Description / Requirements</label>
-          <textarea id="f-msg" placeholder="Please describe your application, required power/flow, quantity, project timeline, or any technical questions..."></textarea>
+          <textarea
+                  id="f-msg"
+                  name="message"
+                  rows="6"
+                  required
+                  maxlength="1000"
+                  placeholder="Please provide product requirements, brand preference, power rating, flow rate, quantity, delivery destination, and any technical specifications."
+>      </textarea>
         </div>
-        <button class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center;padding:13px 28px;">
+        <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center;padding:13px 28px;">
           Send Inquiry
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
         </button>
         <p class="form-note">* Required fields. Your information is used solely to respond to your inquiry and is kept strictly confidential.</p>
         <div class="form-success" id="formSuccess">&#10003;&nbsp; Thank you! Your inquiry has been received. Our team will contact you within 12 business hours.</div>
       </div>
+      </form>
 
       <!-- Info -->
       <div class="reveal">
@@ -1123,26 +1134,6 @@
     });
   });
 
-  /* Contact form */
-  document.getElementById("submitBtn").addEventListener("click", function() {
-    const fname   = document.getElementById("f-fname").value.trim();
-    const email   = document.getElementById("f-email").value.trim();
-    const company = document.getElementById("f-company").value.trim();
-    if (!fname || !email || !company) {
-      alert("Please fill in all required fields: First Name, Email, and Company.");
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-    this.disabled = true;
-    this.textContent = "Sending\u2026";
-    setTimeout(() => {
-      document.getElementById("formSuccess").style.display = "block";
-      this.textContent = "\u2713  Inquiry Sent";
-    }, 1100);
-  });
 
   /* Scroll reveal */
   const observer = new IntersectionObserver((entries) => {
