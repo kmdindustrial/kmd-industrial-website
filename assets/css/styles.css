@@ -215,30 +215,6 @@
  }
 
 
- /* ============================
-   ACTIVE NAVIGATION
-    ============================= */
-
- .nav-links a.active {
-
-   font-weight: 600;
-
- }
-
-
- .nav-links a.active::after {
-
-   width: 100%;
-
- }
-
-
- .nav-links a.active::after {
-
-   width: 100%;
-
- }
-
 
 
  /* === NAVBAR === */
@@ -444,6 +420,23 @@
  #navbar.inner-page .brand-tag {
    color: rgba(255, 255, 255, .44);
  }
+
+
+/* ============================
+   ACTIVE NAVIGATION
+============================= */
+
+.nav-links a.active {
+    font-weight:700;
+    color:#fff;
+}
+
+
+.nav-links a.active::after {
+    width:100%;
+}
+
+
 
  /* === FOOTER === */
 
