@@ -477,7 +477,7 @@ document.addEventListener(
   });
 
 /* =========================
-   Active Navigation
+Active Navigation
 ========================= */
 
 window.initActiveNav = function () {
@@ -488,7 +488,6 @@ window.initActiveNav = function () {
         .pop();
 
 
-    // 首页根路径 / 自动对应 index
     if (currentPage === "") {
         currentPage = "index";
     }
@@ -498,18 +497,16 @@ window.initActiveNav = function () {
     .forEach(link => {
 
 
-        let linkPage = link
+        const linkPage = link
             .getAttribute("href")
             .split("?")[0]
             .replace(".html", "")
             .replace("/", "");
 
 
-        // 清除旧状态
         link.classList.remove("active");
 
 
-        // 匹配当前页面
         if (linkPage === currentPage) {
 
             link.classList.add("active");
