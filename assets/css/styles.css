@@ -299,14 +299,17 @@
    gap: 32px;
  }
 
- .nav-links a {
-   color: rgba(255, 255, 255, .82);
-   font-size: .875rem;
-   font-weight: 500;
-   position: relative;
-   padding-bottom: 8px;
-   transition: color .2s;
- }
+  .nav-links a {
+    color: rgba(255, 255, 255, .82);
+    font-size: .875rem;
+    font-weight:500;
+    position:relative;
+    padding-bottom:3px;
+    transition:color .2s;
+
+    min-width:70px;
+    text-align:center;
+}
 
  .nav-links a::after {
    content: '';
