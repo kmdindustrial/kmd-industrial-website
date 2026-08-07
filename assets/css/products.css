@@ -1,0 +1,652 @@
+/* ==========================================
+   PRODUCTS PAGE
+========================================== */
+
+
+/* ============================
+   PRODUCTS OVERVIEW
+============================ */
+
+
+.products-overview {
+
+    padding:20px 0 20px;
+
+    background:#fff;
+
+}
+
+
+
+/* ============================
+   SECTION HEADER
+============================ */
+
+
+.section-header {
+
+    max-width:850px;
+
+    margin:0 auto 75px;
+
+    text-align:center;
+
+}
+
+
+
+.section-header h2 {
+
+    font-size:38px;
+
+    line-height:1.3;
+
+    color:var(--blue-dark);
+
+    font-weight:750;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.section-header p {
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:var(--text-mid);
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT CATEGORY
+============================ */
+
+
+.product-category {
+
+    margin-bottom:60px;
+
+}
+
+
+
+.category-title {
+
+    margin-bottom:38px;
+
+}
+
+
+
+.category-title h3 {
+
+    font-size:32px;
+
+    line-height:1.3;
+
+    color:var(--blue-dark);
+
+    font-weight:750;
+
+    margin-bottom:14px;
+
+}
+
+
+
+.category-title p {
+
+    max-width:780px;
+
+    font-size:16px;
+
+    line-height:1.75;
+
+    color:var(--text-mid);
+
+}
+
+
+
+/* ============================
+   PRODUCT GRID
+============================ */
+
+
+.product-grid {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT CARD
+============================ */
+
+
+.product-card {
+
+    background:#fff;
+
+    border:1px solid #e6ebf2;
+
+    border-radius:14px;
+
+    padding:35px 30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.product-card:hover {
+
+    transform:translateY(-7px);
+
+    box-shadow:0 20px 45px rgba(13,34,64,.14);
+
+}
+
+
+
+
+/* ============================
+   PRODUCT ICON
+============================ */
+
+
+.product-icon {
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:var(--blue-mid);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT TEXT
+============================ */
+
+
+.product-card h4 {
+
+    font-size:21px;
+
+    line-height:1.45;
+
+    color:var(--blue-dark);
+
+    font-weight:700;
+
+    margin-bottom:16px;
+
+}
+
+
+
+.product-card p {
+
+    font-size:.92rem;
+
+    line-height:1.75;
+
+    color:var(--text-mid);
+
+    margin-bottom:25px;
+
+    flex:1;
+
+}
+
+
+
+.product-card p strong {
+
+    color:var(--text-dark);
+
+    font-weight:700;
+
+}
+
+
+
+
+
+/* ============================
+   LEARN MORE LINK
+============================ */
+
+
+.product-card a {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    color:var(--blue-mid);
+
+    font-size:.88rem;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+}
+
+
+
+.product-card a:hover {
+
+    color:var(--blue-dark);
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+
+
+/* ============================
+   PUMPS
+============================ */
+
+
+.pumps-category {
+
+    padding-top:20px;
+
+}
+
+
+
+
+/* ============================
+   PRODUCT IMAGE
+============================ */
+
+
+.product-image {
+
+    height:220px;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+
+    border-bottom:1px solid #edf1f5;
+
+}
+
+
+
+.product-image img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT BODY
+============================ */
+
+
+.product-body {
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT BRANDS
+============================ */
+
+
+.product-brands {
+
+    display:flex;
+
+    gap:8px;
+
+    margin-bottom:14px;
+
+}
+
+
+
+.product-brands span {
+
+
+    background:#eef4ff;
+
+    color:var(--blue-dark);
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:.72rem;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT TAGS
+============================ */
+
+
+.product-tags {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin:15px 0 25px;
+
+}
+
+
+
+.product-tags span {
+
+    background:#f3f6fa;
+
+    color:var(--text-dark);
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:.72rem;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+
+@media(max-width:1024px){
+
+
+    .product-grid {
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+    .products-overview {
+
+        padding:65px 0;
+
+    }
+
+
+
+    .section-header h2 {
+
+        font-size:30px;
+
+    }
+
+
+
+    .category-title h3 {
+
+        font-size:27px;
+
+    }
+
+
+
+    .product-grid {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .product-card {
+
+        padding:30px 25px;
+
+    }
+
+
+}
+
+/* ==========================================
+   PAGE NAVIGATION 二级导航栏格式
+========================================== */
+
+.page-nav {
+
+  position: sticky;
+
+  top: 72px;
+
+  background: #fff;
+
+  border-bottom: 1px solid #e8edf3;
+
+  z-index: 100;
+
+}
+
+.page-nav-links {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 36px;
+
+  padding: 18px 0;
+
+  flex-wrap: wrap;
+
+}
+
+.page-nav-links a {
+
+  position: relative;
+
+  color: #666;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: .3s ease;
+
+}
+
+.page-nav-links a:hover {
+
+  color: #0A2463;
+
+}
+
+.page-nav-links a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #0A2463;
+
+  transition: .3s ease;
+
+}
+
+.page-nav-links a:hover::after {
+
+  width: 100%;
+
+}
+
+
+/* 二级导航ACTIVE */
+
+.page-nav-links a.active {
+
+    color:#0A2463;
+
+}
+
+
+.page-nav-links a.active::after {
+
+    width:100%;
+
+}
+
+
+/* 页面平滑滚动 */
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+/* 防止固定导航遮挡锚点 */
+
+#motors,
+#pumps {
+
+  scroll-margin-top:140px;
+
+}
+
+@media(max-width:768px) {
+
+  .page-nav {
+
+    top: 64px;
+
+  }
+
+  .page-nav-links {
+
+    gap: 18px;
+
+    padding: 14px 0;
+
+  }
+
+  .page-nav-links a {
+
+    font-size: 14px;
+
+  }
+
+}
+

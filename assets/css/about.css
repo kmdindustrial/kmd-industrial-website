@@ -1,0 +1,957 @@
+/* ==========================================
+   PAGE NAVIGATION
+========================================== */
+
+.page-nav {
+
+  position: sticky;
+
+  top: 72px;
+
+  background: #fff;
+
+  border-bottom: 1px solid #e8edf3;
+
+  z-index: 100;
+
+}
+
+.page-nav-links {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 36px;
+
+  padding: 18px 0;
+
+  flex-wrap: wrap;
+
+}
+
+.page-nav-links a {
+
+  position: relative;
+
+  color: #666;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: .3s ease;
+
+}
+
+.page-nav-links a:hover {
+
+  color: #0A2463;
+
+}
+
+.page-nav-links a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #0A2463;
+
+  transition: .3s ease;
+
+}
+
+
+
+.page-nav-links a:hover::after {
+
+  width: 100%;
+
+}
+
+
+/* 二级导航ACTIVE */
+
+.page-nav-links a.active {
+
+    color:#0A2463;
+
+}
+
+
+.page-nav-links a.active::after {
+
+    width:100%;
+
+}
+
+/* 页面平滑滚动 */
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+/* 防止固定导航遮挡锚点 */
+
+.company-intro,
+.glance-section,
+.expertise-section,
+.brands-section,
+.mission-section {
+
+  scroll-margin-top: 120px;
+
+}
+
+@media(max-width:768px) {
+
+  .page-nav {
+
+    top: 64px;
+
+  }
+
+  .page-nav-links {
+
+    gap: 18px;
+
+    padding: 14px 0;
+
+  }
+
+  .page-nav-links a {
+
+    font-size: 14px;
+
+  }
+
+}
+
+/* ==========================================
+   COMPANY INTRO
+========================================== */
+
+
+.company-intro {
+
+  padding: 65px 0;
+
+  background: #fff;
+
+}
+
+
+.company-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+
+}
+
+
+
+.section-tag {
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: .15em;
+
+  color: #1b5ebc;
+
+}
+
+
+
+.company-text h2 {
+
+  font-size: 40px;
+
+  color: #0A2463;
+
+  margin: 15px 0 25px;
+
+  line-height: 1.25;
+
+}
+
+
+
+.company-text p {
+
+  font-size: 17px;
+
+  color: #444;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+
+}
+
+
+
+.company-image img {
+
+  width: 100%;
+
+  border-radius: 14px;
+
+  display: block;
+
+}
+
+
+
+.text-link {
+
+  color: #0A2463;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+}
+
+
+
+
+/* ==========================================
+   AT A GLANCE
+========================================== */
+
+
+.glance-section {
+
+  padding: 65px 0;
+
+  background: #f7f9fc;
+
+}
+
+
+
+.section-title {
+
+  text-align: center;
+
+  max-width: 760px;
+
+  margin: 0 auto 50px;
+
+}
+
+
+
+.section-title h2 {
+
+  font-size: 38px;
+
+  color: #0A2463;
+
+  margin-bottom: 15px;
+
+}
+
+
+
+.section-title p {
+
+  font-size: 17px;
+
+  color: #555;
+
+  line-height: 1.8;
+
+}
+
+
+
+.glance-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+}
+
+
+
+.glance-card {
+
+  background: #fff;
+
+  padding: 32px 25px;
+
+  border-radius: 14px;
+
+  border: 1px solid #e8edf3;
+
+  transition: .3s;
+
+}
+
+
+
+.glance-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+
+
+.glance-card span {
+
+  color: #1b5ebc;
+
+  font-weight: 700;
+
+  font-size: 14px;
+
+}
+
+
+
+.glance-card h3 {
+
+  color: #0A2463;
+
+  margin: 18px 0 12px;
+
+  font-size: 21px;
+
+}
+
+
+
+.glance-card p {
+
+  color: #444;
+
+  line-height: 1.7;
+
+}
+
+
+
+
+
+/* ==========================================
+   EXPERTISE
+========================================== */
+
+
+.expertise-section {
+
+  padding: 65px 0;
+
+  background: #fff;
+
+}
+
+
+
+.expertise-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+}
+
+
+
+.expertise-card {
+
+  padding: 35px;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  border: 1px solid #e8edf3;
+
+}
+
+
+
+.expertise-icon {
+
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: #eef5ff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #0A2463;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.expertise-card h3 {
+
+  font-size: 22px;
+
+  color: #0A2463;
+
+  margin-bottom: 12px;
+
+}
+
+
+
+.expertise-card p {
+
+  color: #444;
+
+  line-height: 1.7;
+
+}
+
+
+
+
+
+/* ==========================================
+   BRANDS / BRAND PARTNERS
+========================================== */
+
+
+.brands-section {
+
+  padding: var(--pad-sec) 0;
+
+  background: var(--bg-light);
+
+}
+
+
+
+
+
+/* Brand Grid */
+
+.brands-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+
+  align-items: stretch;
+
+}
+
+
+
+
+
+
+/* Brand Card */
+
+.brand-card {
+
+  background: #fff;
+
+  border-radius: 10px;
+
+  padding: 32px 28px;
+
+  box-shadow: var(--shadow);
+
+  border-top: 4px solid transparent;
+
+  transition:
+    transform .24s,
+    box-shadow .24s,
+    border-top-color .24s;
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+
+.brand-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 40px rgba(13, 34, 64, .13);
+
+}
+
+
+
+
+
+
+/* Brand Color */
+
+.brand-card.weg-card {
+
+  border-top-color: var(--weg);
+
+}
+
+
+.brand-card.vem-card {
+
+  border-top-color: var(--vem);
+
+}
+
+
+.brand-card.xylem-card {
+
+  border-top-color: var(--xylem);
+
+}
+
+
+
+
+
+
+
+/* Logo Area */
+
+.brand-logo-area {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+
+
+.brand-badge {
+
+  width: 90px;
+
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: transparent;
+
+  border-radius: 0;
+
+}
+
+
+
+.brand-badge img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+}
+
+
+
+
+
+
+
+/* Brand Text */
+
+.brand-card-name {
+
+  font-size: 1.05rem;
+
+  font-weight: 800;
+
+  color: var(--text-dark);
+
+}
+
+
+
+.brand-card-origin {
+
+  font-size: .75rem;
+
+  color: var(--text-muted);
+
+  margin-top: 2px;
+
+}
+
+
+
+
+
+
+/* Description */
+
+.brand-card-desc {
+
+  font-size: .875rem;
+
+  color: var(--text-mid);
+
+  line-height: 1.68;
+
+}
+
+
+
+
+
+
+
+/* Tags */
+
+.brand-tags {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 16px;
+
+}
+
+
+
+.b-tag {
+
+  font-size: .7rem;
+
+  font-weight: 600;
+
+  padding: 4px 10px;
+
+  border-radius: 99px;
+
+}
+
+
+
+.b-tag.weg {
+
+  background: rgba(230, 126, 34, .12);
+
+  color: #b7611a;
+
+}
+
+
+.b-tag.vem {
+
+  background: rgba(26, 68, 119, .12);
+
+  color: #1a4477;
+
+}
+
+
+.b-tag.xylem {
+
+  background: rgba(30, 132, 73, .12);
+
+  color: #186a3b;
+
+}
+
+
+
+
+
+
+
+/* Buttons */
+
+.brand-actions {
+
+  margin-top: auto;
+
+  padding-top: 20px;
+
+}
+
+
+
+.brand-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 14px;
+
+  font-size: .78rem;
+
+  border-radius: 6px;
+
+  border: 1px solid var(--border);
+
+  background: #fff;
+
+  color: var(--text-mid);
+
+  font-weight: 600;
+
+  transition: .2s;
+
+}
+
+
+
+.brand-btn:hover {
+
+  transform: translateY(-2px);
+
+  border-color: var(--blue-mid);
+
+  color: var(--blue-mid);
+
+}
+
+
+
+.brand-btn.primary {
+
+  background: var(--blue-mid);
+
+  border-color: var(--blue-mid);
+
+  color: #fff;
+
+}
+
+
+
+.brand-btn.primary:hover {
+
+  background: var(--blue-dark);
+
+  color: #fff;
+
+}
+
+
+
+
+
+
+/* Responsive */
+
+@media(max-width:900px) {
+
+
+  .brands-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+}
+
+
+
+/* ==========================================
+   MISSION
+========================================== */
+
+
+.mission-section {
+
+  padding: 65px 0;
+
+  background: #fff;
+
+}
+
+
+
+.mission-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 50px;
+
+}
+
+
+
+.mission-grid h3 {
+
+  font-size: 28px;
+
+  color: #0A2463;
+
+}
+
+
+
+.mission-grid p {
+
+  font-size: 17px;
+
+  color: #444;
+
+  line-height: 1.8;
+
+}
+
+
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+
+@media(max-width:992px) {
+
+
+  .company-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .glance-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+  .expertise-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+}
+
+
+
+@media(max-width:768px) {
+
+
+  .company-intro {
+
+    padding: 60px 0;
+
+  }
+
+
+  .company-text h2 {
+
+    font-size: 30px;
+
+  }
+
+
+  .glance-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .brand-showcase {
+
+    flex-direction: column;
+
+    align-items: center;
+
+  }
+
+
+  .mission-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .section-title h2 {
+
+    font-size: 30px;
+
+  }
+
+
+}

@@ -1,0 +1,641 @@
+/* ==========================================
+   PRODUCT CATEGORY PAGE
+========================================== */
+
+
+/* ============================
+   PRODUCT SECTION
+============================ */
+
+
+.product-section {
+
+    padding:20px 0 30px;
+
+    background:#fff;
+
+}
+
+
+
+
+
+/* ============================
+   PAGE TITLE
+============================ */
+
+
+.series-page-title {
+
+    max-width:900px;
+
+    margin:0 auto 45px;
+
+    text-align:center;
+
+    font-size:38px;
+
+    line-height:1.3;
+
+    color:var(--blue-dark);
+
+    font-weight:750;
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT NAVIGATION
+============================ */
+
+
+.product-nav {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding-bottom:18px;
+
+    margin-bottom:5px;
+
+    border-bottom:1px solid #e8edf3;
+
+}
+
+
+
+.product-nav a {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:9px 22px;
+
+    background:#f3f6fa;
+
+    border-radius:30px;
+
+    color:var(--blue-dark);
+
+    font-size:.85rem;
+
+    font-weight:650;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+}
+
+
+
+.product-nav a:hover {
+
+    background:var(--blue-mid);
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+
+/* ============================
+   PRODUCT GROUP TITLE
+============================ */
+
+
+.product-group-heading {
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:var(--blue-dark);
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* ============================
+   PRODUCT BRAND TITLE
+============================ */
+
+
+.product-brand-heading {
+
+
+    text-align:center;
+
+
+    font-size:26px;
+
+
+    font-weight:750;
+
+
+    color:var(--blue-dark);
+
+
+    margin:65px 0 35px;
+
+
+}
+
+
+/* ============================
+   BRAND SECTION HEADER
+============================ */
+
+
+.brand-section-header {
+
+
+    margin:30px 0 5px;
+
+
+    padding-bottom:10px;
+
+
+    border-bottom:1px dashed #d8e0ea;
+
+
+}
+
+
+
+
+
+.brand-section-header .brand-name {
+
+
+    font-size:36px;
+
+
+    line-height:1.2;
+
+
+    font-weight:800;
+
+
+    color:var(--blue-dark);
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+
+
+.brand-section-header h2 {
+
+
+    margin:0;
+
+
+    font-size:18px;
+
+
+    line-height:1.4;
+
+
+    font-weight:600;
+
+
+    color:var(--text-mid);
+
+
+}
+
+
+
+
+/* ============================
+   PRODUCT ITEM
+============================ */
+
+
+.product-item {
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:55px;
+
+    align-items:center;
+
+    padding-top:20px;
+
+    padding-bottom:35px;
+
+    border-bottom:1px solid #e9eef5;
+
+    scroll-margin-top:120px;
+
+}
+
+
+
+.product-item:last-child {
+
+    border-bottom:none;
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT IMAGE
+============================ */
+
+
+.product-image {
+
+
+    height:260px;
+
+
+    background:#fff;
+
+
+    border:1px solid #e6ebf2;
+
+
+    border-radius:12px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    padding:25px;
+
+
+}
+
+
+
+.product-image img {
+
+
+    max-width:100%;
+
+
+    max-height:100%;
+
+
+    object-fit:contain;
+
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT CONTENT
+============================ */
+
+
+.product-content h3 {
+
+
+    font-size:26px;
+
+
+    line-height:1.4;
+
+
+    color:var(--blue-dark);
+
+
+    font-weight:750;
+
+
+    margin:0 0 15px;
+
+
+}
+
+
+
+.product-content p {
+
+
+    color:var(--text-mid);
+
+
+    font-size:.95rem;
+
+
+    line-height:1.75;
+
+
+    max-width:650px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT SPEC GRID
+============================ */
+
+
+.product-spec-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(2,1fr);
+
+
+    gap:12px;
+
+
+    margin-bottom:28px;
+
+
+}
+
+.motor-spec-large {
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+
+.product-spec {
+
+
+    background:#f7f9fc;
+
+
+    padding:12px 14px;
+
+
+    border-radius:8px;
+
+
+    border:1px solid #edf1f5;
+
+
+}
+
+
+
+.product-spec strong {
+
+
+    display:block;
+
+
+    color:var(--blue-dark);
+
+
+    font-size:.78rem;
+
+
+    margin-bottom:5px;
+
+
+}
+
+
+
+.product-spec span {
+
+
+    color:var(--text-mid);
+
+
+    font-size:.85rem;
+
+
+}
+
+
+
+
+
+/* ============================
+   PRODUCT LINK
+============================ */
+
+.product-link.hidden {
+    display:none;
+}
+
+
+.product-link {
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    padding:9px 20px;
+
+
+    border:1px solid var(--blue-dark);
+
+
+    color:var(--blue-dark);
+
+
+    border-radius:3px;
+
+
+    font-size:14px;
+
+
+    font-weight:600;
+
+
+    text-decoration:none;
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.product-link:hover {
+
+
+    background:var(--blue-dark);
+
+
+    color:#fff;
+
+
+}
+
+
+
+
+
+/* ============================
+   BREADCRUMB
+============================ */
+
+
+.breadcrumb {
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    padding:10px 20px;
+
+    font-size:.85rem;
+
+    color:#7a8699;
+
+}
+
+
+
+.breadcrumb a {
+
+    color:var(--blue-mid);
+
+    text-decoration:none;
+
+}
+
+
+
+.breadcrumb span {
+
+    margin:0 8px;
+
+    color:#b0b8c5;
+
+}
+
+
+
+.breadcrumb .current {
+
+    color:var(--text-dark);
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+
+@media(max-width:900px){
+
+
+    .product-item {
+
+
+        grid-template-columns:1fr;
+
+
+        gap:35px;
+
+
+    }
+
+
+
+    .product-image {
+
+
+        height:240px;
+
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+    .product-section {
+
+
+        padding:55px 0 70px;
+
+
+    }
+
+
+
+    .series-page-title {
+
+
+        font-size:28px;
+
+
+    }
+
+
+
+    .product-spec-grid {
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+}

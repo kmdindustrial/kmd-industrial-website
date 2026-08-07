@@ -1,0 +1,537 @@
+ /* === HERO === */
+ #hero {
+   position: relative;
+   height: 100vh;
+   min-height: 580px;
+   max-height: 860px;
+   overflow: hidden;
+ }
+
+ .carousel-track {
+   display: flex;
+   height: 100%;
+   transition: transform .65s cubic-bezier(.25, .46, .45, .94);
+ }
+
+ .carousel-slide {
+   flex: 0 0 100%;
+   height: 100%;
+   position: relative;
+   display: flex;
+   align-items: center;
+ }
+
+ .slide-bg {
+   position: absolute;
+   inset: 0;
+ }
+
+ .s1 .slide-bg {
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(13,34,64,.85),
+        rgba(13,34,64,.25)
+    ),
+    url("../images/hero-1.webp");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+.s2 .slide-bg {
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(13,34,64,.85),
+        rgba(13,34,64,.25)
+    ),
+    url("../images/hero-2.webp");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+.s3 .slide-bg {
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(13,34,64,.85),
+        rgba(13,34,64,.25)
+    ),
+    url("../images/hero-3.webp");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+ .slide-bg::after {
+   content: '';
+   position: absolute;
+   inset: 0;
+   background-image: radial-gradient(circle, rgba(77, 166, 232, .18) 1px, transparent 1px);
+   background-size: 26px 26px;
+   pointer-events: none;
+ }
+
+ .slide-ph-note {
+   position: absolute;
+   bottom: 34px;
+   right: 34px;
+   font-size: .68rem;
+   color: rgba(255, 255, 255, .22);
+   letter-spacing: .05em;
+   border: 1px dashed rgba(255, 255, 255, .14);
+   padding: 5px 11px;
+   border-radius: 2px;
+   z-index: 2;
+ }
+
+ .slide-content {
+   position: relative;
+   z-index: 3;
+   width: 100%;
+ }
+
+ .slide-tag {
+   display: inline-block;
+   font-size: .68rem;
+   font-weight: 700;
+   letter-spacing: .16em;
+   text-transform: uppercase;
+   color: var(--blue-light);
+   border: 1px solid rgba(77, 166, 232, .38);
+   padding: 5px 13px;
+   border-radius: 2px;
+   margin-bottom: 20px;
+ }
+
+ .slide-headline {
+   color: #fff;
+   margin-bottom: 17px;
+ }
+
+ .slide-desc {
+   font-size: 1.05rem;
+   color: rgba(255, 255, 255, .62);
+   max-width: 510px;
+   margin-bottom: 32px;
+ }
+
+ .slide-actions {
+   display: flex;
+   gap: 14px;
+   flex-wrap: wrap;
+ }
+
+ .carousel-arrow {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 10;
+   background: rgba(255, 255, 255, .07);
+   border: 1px solid rgba(255, 255, 255, .18);
+   color: #fff;
+   width: 46px;
+   height: 46px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: background .2s;
+   font-size: 1.05rem;
+ }
+
+ .carousel-arrow:hover {
+   background: rgba(255, 255, 255, .18);
+ }
+
+ .c-prev {
+   left: 28px;
+ }
+
+ .c-next {
+   right: 28px;
+ }
+
+ .carousel-dots {
+   position: absolute;
+   bottom: 26px;
+   left: 50%;
+   transform: translateX(-50%);
+   display: flex;
+   gap: 10px;
+   z-index: 10;
+ }
+
+ .c-dot {
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: rgba(255, 255, 255, .3);
+   border: none;
+   transition: all .25s;
+ }
+
+ .c-dot.active {
+   background: #fff;
+   transform: scale(1.35);
+ }
+
+ /* ============================
+   HOME PAGE
+============================= */
+
+
+ .home-explore {
+
+   padding: 70px 0;
+
+   background: #f7f9fc;
+
+ }
+
+
+
+ .home-explore-grid {
+
+   display: grid;
+
+   grid-template-columns: repeat(4, 1fr);
+
+   gap: 20px;
+
+ }
+
+
+ .home-explore-card {
+
+   background: #fff;
+
+   padding: 30px;
+
+   border: 1px solid #e1e7ef;
+
+   transition: .3s;
+
+ }
+
+
+ .home-explore-card:hover {
+
+   transform: translateY(-5px);
+
+   box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+
+ }
+
+
+ .home-explore-card h3 {
+
+   color: #0A2463;
+
+   margin-bottom: 12px;
+
+ }
+
+
+ /* ============================
+   ABOUT + BRANDS
+============================= */
+
+
+ .home-about-brand {
+
+   padding: 65px 0;
+
+   background: #ffffff;
+
+ }
+
+
+.home-about-brand .btn {
+
+   margin-top:20px;
+
+}
+
+
+ .about-brand-grid {
+
+   display: grid;
+
+   grid-template-columns: 1.4fr 1fr;
+
+   gap: 70px;
+
+   align-items: start;
+
+ }
+
+
+ .brand-box {
+
+   padding: 0;
+
+ }
+
+
+ .home-brand-list {
+
+   display: flex;
+
+   align-items: center;
+
+   gap: 35px;
+
+   margin-top: 30px;
+
+ }
+
+
+ .home-brand-list img {
+
+   width: 110px;
+
+   height: 55px;
+
+   object-fit: contain;
+
+ }
+
+
+ .home-brand-list img:hover {
+
+   transform: scale(1.05);
+
+ }
+
+
+
+
+
+ @media(max-width:900px) {
+
+
+   .about-brand-grid {
+
+     grid-template-columns: 1fr;
+
+   }
+
+
+   .brand-box {
+
+     padding: 30px;
+
+   }
+
+
+ }
+
+
+
+
+ /* PRODUCTS */
+
+ .home-products {
+
+   padding: 65px 0;
+
+   background: #f7f9fc
+ }
+
+
+ .home-product-grid {
+
+   display: grid;
+
+   grid-template-columns: repeat(3, 1fr);
+
+   gap: 30px;
+
+ }
+
+
+ .home-product-card {
+
+   padding: 35px;
+
+   border: 1px solid #dde5ef;
+
+   border-radius: 8px;
+
+   background: #fff;
+
+ }
+
+
+
+ .home-product-card h3 {
+
+   color: #0A2463;
+
+   margin-bottom: 15px;
+
+ }
+
+
+ .home-product-card li {
+
+   margin: 8px 0;
+
+ }
+
+
+
+ .home-product-card a {
+
+   color: #1d65a5;
+
+   font-weight: 600;
+
+ }
+
+
+
+
+ /* INDUSTRIES */
+
+
+ .home-industries {
+
+   padding: 65px 0;
+
+ }
+
+
+
+ .home-industry-grid {
+
+   display: grid;
+
+   grid-template-columns: repeat(3, 1fr);
+
+   gap: 20px;
+
+ }
+
+
+ .home-industry-grid div {
+
+   padding: 25px;
+
+   background: #0A2463;
+
+   color: #fff;
+
+   text-align: center;
+
+   font-weight: 600;
+
+   border-radius: 6px;
+
+ }
+
+ /* ============================
+   HOME INDUSTRIES LINKS
+============================= */
+
+ .home-industry-grid a {
+
+   display: block;
+
+   width: 100%;
+
+   height: 100%;
+
+   text-decoration: none;
+
+   color: inherit;
+
+ }
+
+
+ /* ============================
+   INDUSTRY ANCHOR OFFSET
+============================= */
+
+ .industry-card {
+
+   scroll-margin-top: 100px;
+
+ }
+
+
+
+ /* WHY */
+
+
+ .home-why {
+
+   padding: 65px 0;
+
+   background: #f7f9fc;
+
+ }
+
+
+
+ .home-why-grid {
+
+   display: grid;
+
+   grid-template-columns: repeat(4, 1fr);
+
+   gap: 25px;
+
+ }
+
+
+
+ .home-why-grid div {
+
+   background: white;
+
+   padding: 30px;
+
+   text-align: center;
+
+ }
+
+
+
+
+ /* MOBILE */
+
+ @media(max-width:900px) {
+
+
+   .home-explore-grid,
+   .home-product-grid,
+   .home-industry-grid,
+   .home-why-grid {
+
+     grid-template-columns: 1fr;
+
+   }
+
+
+   .home-brand-list {
+
+     flex-direction: column;
+
+     gap: 35px;
+
+   }
+
+
+ }

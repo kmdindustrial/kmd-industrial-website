@@ -1,0 +1,221 @@
+/* ==========================================
+   SERVICES SECTION
+========================================== */
+
+#services {
+
+  padding: 80px 0 100px;
+
+  background: #fff;
+
+}
+
+
+/* 宽度 */
+
+#services .container {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+}
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+#services .section-eyebrow {
+
+  color: #1b5ebc;
+
+}
+
+
+#services .section-title h2 {
+
+  font-size: 40px;
+
+  font-weight: 700;
+
+  color: #0A2463;
+
+  line-height: 1.2;
+
+}
+
+
+#services .section-title p {
+
+  font-size: 18px;
+
+  color: #555;
+
+  line-height: 1.8;
+
+}
+
+
+/* ==========================================
+   GRID
+========================================== */
+
+
+.services-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+}
+
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+
+.svc-card {
+
+  background: #fff;
+
+  border: 1px solid #e8edf3;
+
+  border-radius: 14px;
+
+  padding: 30px 22px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+
+.svc-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .10);
+
+}
+
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+
+.svc-icon {
+
+  width: 50px;
+
+  height: 50px;
+
+  background: #eef5ff;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #0A2463;
+
+  margin-bottom: 18px;
+
+}
+
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+
+.svc-num {
+
+  font-size: .75rem;
+
+  font-weight: 700;
+
+  letter-spacing: .1em;
+
+  color: #1b5ebc;
+
+  margin-bottom: 12px;
+
+}
+
+
+
+.svc-title {
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  color: #0A2463;
+
+  margin-bottom: 12px;
+
+}
+
+
+
+.svc-desc {
+
+  font-size: .9rem;
+
+  color: #444;
+
+  line-height: 1.7;
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+
+@media(max-width:992px) {
+
+  .services-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+
+
+@media(max-width:768px) {
+
+  .services-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  #services .section-title h2 {
+
+    font-size: 32px;
+
+  }
+
+}
