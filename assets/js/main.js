@@ -482,39 +482,45 @@ document.addEventListener(
 
 window.initActiveNav = function () {
 
-  let currentPage = window.location.pathname.split("/").pop();
+    let currentPage = window.location.pathname
+        .replace(/\/$/, "")
+        .split("/")
+        .pop();
 
 
-  // 首页根路径 / 自动对应 index.html
-  if (currentPage === "") {
-    currentPage = "index.html";
-  }
+    // 首页根路径 / 自动对应 index
+    if (currentPage === "") {
+        currentPage = "index";
+    }
 
 
-  document.querySelectorAll(".nav-link")
+    document.querySelectorAll(".nav-link")
     .forEach(link => {
 
 
-      const linkPage = link
-        .getAttribute("href")
-        .split("?")[0];
+        let linkPage = link
+            .getAttribute("href")
+            .split("?")[0]
+            .replace(".html", "")
+            .replace("/", "");
 
 
-      // 清除旧状态
-      link.classList.remove("active");
+        // 清除旧状态
+        link.classList.remove("active");
 
 
-      // 匹配当前页面
-      if (linkPage === currentPage) {
+        // 匹配当前页面
+        if (linkPage === currentPage) {
 
-        link.classList.add("active");
+            link.classList.add("active");
 
-      }
+        }
 
 
     });
 
 };
+
 
 
 /* =========================
