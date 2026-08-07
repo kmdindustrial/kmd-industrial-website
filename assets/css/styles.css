@@ -656,6 +656,15 @@
      gap: 44px;
    }
 
+   .contact-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 44px;
+
+   }
+
+
    .services-grid {
      grid-template-columns: repeat(2, 1fr);
    }
@@ -690,8 +699,7 @@
    }
 
 
-   .about-grid,
-   .contact-grid {
+   .about-grid{
 
      grid-template-columns: 1fr;
 
