@@ -121,3 +121,26 @@
   border-radius: 8px;
   border: 1.5px dashed var(--border);
 }
+
+
+/* =========================
+   CONTACT RESPONSIVE
+========================= */
+
+@media (max-width:900px){
+
+    .contact-grid {
+        grid-template-columns:1fr;
+        gap:44px;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .form-row {
+        grid-template-columns:1fr;
+    }
+
+}
