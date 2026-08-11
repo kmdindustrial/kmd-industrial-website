@@ -124,13 +124,13 @@
 
     text-align:center;
 
-    font-size:18px;
+    font-size:26px;
 
     font-weight:700;
 
     color:var(--blue-dark);
 
-    margin-bottom:0 0 30px;
+    margin-bottom:20px;
 
 }
 
@@ -267,8 +267,6 @@
 
 
 
-
-
 /* ============================
    PRODUCT IMAGE
 ============================ */
@@ -331,7 +329,7 @@
 .product-content h3 {
 
 
-    font-size:26px;
+    font-size:22px;
 
 
     line-height:1.4;
@@ -340,7 +338,7 @@
     color:var(--blue-dark);
 
 
-    font-weight:750;
+    font-weight:700;
 
 
     margin:0 0 15px;
