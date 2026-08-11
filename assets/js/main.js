@@ -662,3 +662,118 @@ document.addEventListener(
     "DOMContentLoaded",
     initSectionNav
 );
+
+
+/* ============================
+   PRODUCT PAGE RETURN MEMORY
+   产品页面返回位置记忆
+============================ */
+
+
+/* =========================
+   Save Product Section
+   保存产品所属区域
+========================= */
+
+window.saveProductSection = function (section) {
+
+
+    sessionStorage.setItem(
+
+        "productReturnSection",
+
+        section
+
+    );
+
+
+};
+
+
+
+
+
+/* =========================
+   Restore Product Section
+   恢复产品所属区域
+========================= */
+
+window.restoreProductSection = function () {
+
+
+    const section = sessionStorage.getItem(
+
+        "productReturnSection"
+
+    );
+
+
+
+    if (!section) {
+
+        return;
+
+    }
+
+
+
+    const target = document.getElementById(
+
+        section
+
+    );
+
+
+
+    if (target) {
+
+
+        target.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start"
+
+        });
+
+
+    }
+
+
+
+    /*
+      Prevent repeated jumping
+      防止刷新页面重复定位
+    */
+
+    sessionStorage.removeItem(
+
+        "productReturnSection"
+
+    );
+
+
+};
+
+
+
+
+
+/* =========================
+   Initialize Product Return
+   初始化产品返回定位
+========================= */
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    function () {
+
+
+        restoreProductSection();
+
+
+    }
+
+);
