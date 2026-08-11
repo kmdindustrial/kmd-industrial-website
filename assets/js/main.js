@@ -666,7 +666,7 @@ document.addEventListener(
 
 /* ============================
    PRODUCT PAGE RETURN MEMORY
-   产品页面返回位置记忆
+   产品页面返回区域记忆
 ============================ */
 
 
@@ -698,15 +698,13 @@ window.saveProductSection = function (section) {
    恢复产品所属区域
 ========================= */
 
-window.restoreProductSection = function () {
+function restoreProductSection() {
 
 
-    const section = sessionStorage.getItem(
-
+    const section =
+    sessionStorage.getItem(
         "productReturnSection"
-
     );
-
 
 
     if (!section) {
@@ -716,64 +714,34 @@ window.restoreProductSection = function () {
     }
 
 
-
-    const target = document.getElementById(
-
-        section
-
-    );
-
+    const target =
+    document.getElementById(section);
 
 
     if (target) {
 
 
-        target.scrollIntoView({
+        setTimeout(function(){
 
-            behavior: "smooth",
 
-            block: "start"
+            target.scrollIntoView({
 
-        });
+                behavior:"smooth",
+
+                block:"start"
+
+            });
+
+
+        },100);
 
 
     }
 
 
-
-    /*
-      Prevent repeated jumping
-      防止刷新页面重复定位
-    */
-
     sessionStorage.removeItem(
-
         "productReturnSection"
-
     );
 
 
-};
-
-
-
-
-
-/* =========================
-   Initialize Product Return
-   初始化产品返回定位
-========================= */
-
-document.addEventListener(
-
-    "DOMContentLoaded",
-
-    function () {
-
-
-        restoreProductSection();
-
-
-    }
-
-);
+}
