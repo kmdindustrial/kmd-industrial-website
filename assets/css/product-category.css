@@ -112,7 +112,24 @@
 
 
 
+/* ============================
+   BRAND CATEGORY TITLE
+   品牌产品分类标题
+============================= */
 
+.brand-category {
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:var(--text-mid);
+
+    margin-top:5px;
+
+    margin-bottom:0px;
+
+}
 
 
 /* ============================
