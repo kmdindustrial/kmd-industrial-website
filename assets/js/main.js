@@ -449,15 +449,19 @@ document.addEventListener(
     initRFQForm();
 
     // Restore Product Section
-if (
-    window.location.pathname.includes("products.html")
-    &&
-    window.restoreProductSection
-) {
+    if (
+      (
+        document.getElementById("motors")
+        ||
+        document.getElementById("pumps")
+      )
+      &&
+      window.restoreProductSection
+    ) {
 
-    window.restoreProductSection();
+      window.restoreProductSection();
 
-}
+    }
 
     // Navbar
     if (window.initNavbar) {
@@ -491,36 +495,36 @@ Active Navigation
 
 window.initActiveNav = function () {
 
-    let currentPage = window.location.pathname
-        .replace(/\/$/, "")
-        .split("/")
-        .pop();
+  let currentPage = window.location.pathname
+    .replace(/\/$/, "")
+    .split("/")
+    .pop();
 
 
-    if (currentPage === "") {
-        currentPage = "index";
-    }
+  if (currentPage === "") {
+    currentPage = "index";
+  }
 
 
-    document.querySelectorAll(".nav-link")
+  document.querySelectorAll(".nav-link")
     .forEach(link => {
 
 
-        const linkPage = link
-            .getAttribute("href")
-            .split("?")[0]
-            .replace(".html", "")
-            .replace("/", "");
+      const linkPage = link
+        .getAttribute("href")
+        .split("?")[0]
+        .replace(".html", "")
+        .replace("/", "");
 
 
-        link.classList.remove("active");
+      link.classList.remove("active");
 
 
-        if (linkPage === currentPage) {
+      if (linkPage === currentPage) {
 
-            link.classList.add("active");
+        link.classList.add("active");
 
-        }
+      }
 
 
     });
@@ -600,13 +604,13 @@ Save Product Section
 window.saveProductSection = function (section) {
 
 
-    sessionStorage.setItem(
+  sessionStorage.setItem(
 
-        "productReturnSection",
+    "productReturnSection",
 
-        section
+    section
 
-    );
+  );
 
 
 };
@@ -623,55 +627,55 @@ Restore Product Section
 window.restoreProductSection = function () {
 
 
-    const section = sessionStorage.getItem(
+  const section = sessionStorage.getItem(
 
-        "productReturnSection"
+    "productReturnSection"
 
-    );
-
-
-    if (!section) {
-
-        return;
-
-    }
+  );
 
 
+  if (!section) {
 
-    const target = document.getElementById(
+    return;
 
-        section
-
-    );
-
-
-    if (target) {
-
-
-        setTimeout(function(){
-
-
-            window.scrollTo(
-
-                0,
-
-                target.offsetTop - 90
-
-            );
-
-
-        },100);
-
-
-    }
+  }
 
 
 
-    sessionStorage.removeItem(
+  const target = document.getElementById(
 
-        "productReturnSection"
+    section
 
-    );
+  );
+
+
+  if (target) {
+
+
+    setTimeout(function () {
+
+
+      window.scrollTo(
+
+        0,
+
+        target.offsetTop - 90
+
+      );
+
+
+    }, 100);
+
+
+  }
+
+
+
+  sessionStorage.removeItem(
+
+    "productReturnSection"
+
+  );
 
 
 };
@@ -682,85 +686,85 @@ window.restoreProductSection = function () {
    SECTION NAV ACTIVE 二级导航
 ============================ */
 
-function initSectionNav(){
+function initSectionNav() {
 
 
-    const sections = document.querySelectorAll(
-        "section[id]"
-    );
+  const sections = document.querySelectorAll(
+    "section[id]"
+  );
 
 
-    const navLinks = document.querySelectorAll(
-        ".page-nav-links a"
-    );
+  const navLinks = document.querySelectorAll(
+    ".page-nav-links a"
+  );
 
 
-    if(!sections.length || !navLinks.length){
-        return;
-    }
+  if (!sections.length || !navLinks.length) {
+    return;
+  }
 
 
 
-    const observer = new IntersectionObserver(
-        
-        entries => {
+  const observer = new IntersectionObserver(
+
+    entries => {
 
 
-            entries.forEach(entry => {
+      entries.forEach(entry => {
 
 
-                if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
 
-                    navLinks.forEach(link=>{
+          navLinks.forEach(link => {
 
-                        link.classList.remove("active");
+            link.classList.remove("active");
 
-                    });
-
-
-                    const activeLink = document.querySelector(
-                        `.page-nav-links a[href="#${entry.target.id}"]`
-                    );
+          });
 
 
-                    if(activeLink){
-
-                        activeLink.classList.add("active");
-
-                    }
+          const activeLink = document.querySelector(
+            `.page-nav-links a[href="#${entry.target.id}"]`
+          );
 
 
-                }
+          if (activeLink) {
 
+            activeLink.classList.add("active");
 
-            });
+          }
 
-
-        },
-
-        {
-
-            rootMargin:"-40% 0px -50% 0px"
 
         }
 
-    );
+
+      });
+
+
+    },
+
+    {
+
+      rootMargin: "-40% 0px -50% 0px"
+
+    }
+
+  );
 
 
 
-    sections.forEach(section=>{
+  sections.forEach(section => {
 
-        observer.observe(section);
+    observer.observe(section);
 
-    });
+  });
 
 
 }
 
 
 document.addEventListener(
-    "DOMContentLoaded",
-    initSectionNav
+  "DOMContentLoaded",
+  initSectionNav
 );
 
