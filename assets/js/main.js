@@ -448,7 +448,16 @@ document.addEventListener(
 
     initRFQForm();
 
+    // Restore Product Section
+if (
+    window.location.pathname.includes("products.html")
+    &&
+    window.restoreProductSection
+) {
 
+    window.restoreProductSection();
+
+}
 
     // Navbar
     if (window.initNavbar) {
@@ -578,6 +587,98 @@ window.restoreSection = function () {
 
 
 /* ============================
+PRODUCT PAGE RETURN MEMORY
+产品页面返回区域记忆
+============================ */
+
+
+/* =========================
+Save Product Section
+保存产品所属区域
+========================= */
+
+window.saveProductSection = function (section) {
+
+
+    sessionStorage.setItem(
+
+        "productReturnSection",
+
+        section
+
+    );
+
+
+};
+
+
+
+
+
+/* =========================
+Restore Product Section
+恢复产品所属区域
+========================= */
+
+window.restoreProductSection = function () {
+
+
+    const section = sessionStorage.getItem(
+
+        "productReturnSection"
+
+    );
+
+
+    if (!section) {
+
+        return;
+
+    }
+
+
+
+    const target = document.getElementById(
+
+        section
+
+    );
+
+
+    if (target) {
+
+
+        setTimeout(function(){
+
+
+            window.scrollTo(
+
+                0,
+
+                target.offsetTop - 90
+
+            );
+
+
+        },100);
+
+
+    }
+
+
+
+    sessionStorage.removeItem(
+
+        "productReturnSection"
+
+    );
+
+
+};
+
+
+
+/* ============================
    SECTION NAV ACTIVE 二级导航
 ============================ */
 
@@ -663,85 +764,3 @@ document.addEventListener(
     initSectionNav
 );
 
-
-/* ============================
-   PRODUCT PAGE RETURN MEMORY
-   产品页面返回区域记忆
-============================ */
-
-
-/* =========================
-   Save Product Section
-   保存产品所属区域
-========================= */
-
-window.saveProductSection = function (section) {
-
-
-    sessionStorage.setItem(
-
-        "productReturnSection",
-
-        section
-
-    );
-
-
-};
-
-
-
-
-
-/* =========================
-   Restore Product Section
-   恢复产品所属区域
-========================= */
-
-function restoreProductSection() {
-
-
-    const section =
-    sessionStorage.getItem(
-        "productReturnSection"
-    );
-
-
-    if (!section) {
-
-        return;
-
-    }
-
-
-    const target =
-    document.getElementById(section);
-
-
-    if (target) {
-
-
-        setTimeout(function(){
-
-
-            target.scrollIntoView({
-
-                behavior:"smooth",
-
-                block:"start"
-
-            });
-
-
-        },100);
-
-
-    }
-
-
-    sessionStorage.removeItem(
-        "productReturnSection"
-    );
-
-
-}
