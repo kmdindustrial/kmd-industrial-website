@@ -439,7 +439,6 @@ window.addEventListener(
   "load",
   () => {
 
-
     initHeroCarousel();
 
     initBrandTabs();
@@ -447,6 +446,39 @@ window.addEventListener(
     initScrollReveal();
 
     initRFQForm();
+
+
+
+    /* =========================
+       Home → About Brands
+    ========================= */
+
+    const urlParams =
+      new URLSearchParams(
+        window.location.search
+      );
+
+    const fromHomeBrand =
+      urlParams.get("from") === "home-brand";
+
+
+    if (fromHomeBrand) {
+
+      const brandsSection =
+        document.getElementById("brands");
+
+
+      if (brandsSection) {
+
+        window.scrollTo(
+          0,
+          brandsSection.offsetTop - 90
+        );
+
+      }
+
+    }
+
 
 
     // Navbar
@@ -474,9 +506,7 @@ window.addEventListener(
 
     }
 
-
   });
-
 
 
 
@@ -486,66 +516,66 @@ window.addEventListener(
 
 window.initActiveNav = function () {
 
-    let currentPage = window.location.pathname
-        .replace(/\/$/, "")
-        .split("/")
-        .pop();
+  let currentPage = window.location.pathname
+    .replace(/\/$/, "")
+    .split("/")
+    .pop();
 
-    if (currentPage === "") {
-        currentPage = "index";
-    }
-
-
-    /* =========================
-       Products Sub Pages
-    ========================= */
-
-    const productPages = [
-        "low-voltage-motors",
-        "medium-high-voltage-motors",
-        "explosion-proof-motors",
-        "end-suction-pumps",
-        "double-suction-pumps",
-        "multistage-pumps",
-        "submersible-pumps"
-    ];
+  if (currentPage === "") {
+    currentPage = "index";
+  }
 
 
-    document.querySelectorAll(".nav-link")
-        .forEach(link => {
+  /* =========================
+     Products Sub Pages
+  ========================= */
 
-            const linkPage = link
-                .getAttribute("href")
-                .split("?")[0]
-                .replace(".html", "")
-                .replace("/", "");
-
-
-            link.classList.remove("active");
-
-
-            /* Normal Page */
-
-            if (linkPage === currentPage) {
-
-                link.classList.add("active");
-
-            }
+  const productPages = [
+    "low-voltage-motors",
+    "medium-high-voltage-motors",
+    "explosion-proof-motors",
+    "end-suction-pumps",
+    "double-suction-pumps",
+    "multistage-pumps",
+    "submersible-pumps"
+  ];
 
 
-            /* Products Sub Pages */
+  document.querySelectorAll(".nav-link")
+    .forEach(link => {
 
-            else if (
-                linkPage === "products"
-                &&
-                productPages.includes(currentPage)
-            ) {
+      const linkPage = link
+        .getAttribute("href")
+        .split("?")[0]
+        .replace(".html", "")
+        .replace("/", "");
 
-                link.classList.add("active");
 
-            }
+      link.classList.remove("active");
 
-        });
+
+      /* Normal Page */
+
+      if (linkPage === currentPage) {
+
+        link.classList.add("active");
+
+      }
+
+
+      /* Products Sub Pages */
+
+      else if (
+        linkPage === "products"
+        &&
+        productPages.includes(currentPage)
+      ) {
+
+        link.classList.add("active");
+
+      }
+
+    });
 
 };
 
