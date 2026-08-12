@@ -15,7 +15,17 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/products.css">
   <link rel="canonical" href="https://kmdequipment.com/products.html">
+  <style>
+    html.product-return-pending body {
+      visibility: hidden;
+    }
+  </style>
 
+  <script>
+    if (sessionStorage.getItem("productReturnSection")) {
+      document.documentElement.classList.add("product-return-pending");
+    }
+  </script>
 
 </head>
 
@@ -36,7 +46,8 @@
       <a href="index.html?" class="nav-brand">
 
 
-        <img src="assets/images/kmd-logo.png" class="nav-logo-img" width="120" height="60" alt="Kamaide Technology Co., Ltd. (KMD) logo">
+        <img src="assets/images/kmd-logo.png" class="nav-logo-img" width="120" height="60"
+          alt="Kamaide Technology Co., Ltd. (KMD) logo">
 
 
         <div class="nav-brand-text">
@@ -317,7 +328,7 @@
 
 
 
-              <a href="low-voltage-motors.html"  onclick="saveProductSection('motors')">
+              <a href="low-voltage-motors.html" onclick="saveProductSection('motors')">
                 View Products →
               </a>
 
@@ -339,7 +350,8 @@
 
             <div class="product-image">
 
-              <img src="assets/images/medium-high-voltage-motor.webp" alt="WEG and VEM medium high voltage industrial motors">
+              <img src="assets/images/medium-high-voltage-motor.webp"
+                alt="WEG and VEM medium high voltage industrial motors">
 
             </div>
 
@@ -514,7 +526,8 @@
 
             <div class="product-image">
 
-              <img src="assets/images/xylem-end-suction-pump.webp" alt="Lowara and Bell & Gossett end suction pumps by Xylem for industrial water and process applications">
+              <img src="assets/images/xylem-end-suction-pump.webp"
+                alt="Lowara and Bell & Gossett end suction pumps by Xylem for industrial water and process applications">
 
             </div>
 
@@ -538,7 +551,8 @@
 
 
               <p>
-                Efficient centrifugal pump solutions from Lowara and Bell & Gossett by Xylem for industrial water supply, HVAC and process applications.
+                Efficient centrifugal pump solutions from Lowara and Bell & Gossett by Xylem for industrial water
+                supply, HVAC and process applications.
               </p>
 
 
@@ -577,7 +591,8 @@
 
             <div class="product-image">
 
-              <img src="assets/images/xylem-double-suction-pump.webp" alt="Lowara and Bell & Gossett double suction pumps by Xylem for industrial water and infrastructure applications">
+              <img src="assets/images/xylem-double-suction-pump.webp"
+                alt="Lowara and Bell & Gossett double suction pumps by Xylem for industrial water and infrastructure applications">
 
             </div>
 
@@ -601,7 +616,8 @@
 
 
               <p>
-                High flow double suction pump solutions from Lowara and Bell & Gossett by Xylem for large-scale industrial, water, and infrastructure applications.
+                High flow double suction pump solutions from Lowara and Bell & Gossett by Xylem for large-scale
+                industrial, water, and infrastructure applications.
               </p>
 
 
@@ -640,7 +656,8 @@
 
             <div class="product-image">
 
-              <img src="assets/images/xylem-submersible-pump.webp" alt="Flygt submersible pumps by Xylem for wastewater, drainage, and industrial applications">
+              <img src="assets/images/xylem-submersible-pump.webp"
+                alt="Flygt submersible pumps by Xylem for wastewater, drainage, and industrial applications">
 
             </div>
 
@@ -664,7 +681,8 @@
 
 
               <p>
-                Reliable Flygt submersible pump solutions by Xylem for wastewater, drainage, and industrial applications.
+                Reliable Flygt submersible pump solutions by Xylem for wastewater, drainage, and industrial
+                applications.
               </p>
 
 

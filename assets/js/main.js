@@ -436,8 +436,8 @@ Normal Page Load
 ========================= */
 
 window.addEventListener(
-"load",
-() => {
+  "load",
+  () => {
 
 
     initHeroCarousel();
@@ -449,7 +449,7 @@ window.addEventListener(
     initRFQForm();
 
 
-  // Restore Product Section
+    // Restore Product Section
     if (
       (
         document.getElementById("motors")
@@ -460,15 +460,7 @@ window.addEventListener(
       window.restoreProductSection
     ) {
 
-
-        setTimeout(() => {
-
-
-            window.restoreProductSection();
-
-
-        }, 500);
-
+      window.restoreProductSection();
 
     }
 
@@ -477,7 +469,7 @@ window.addEventListener(
     // Navbar
     if (window.initNavbar) {
 
-        window.initNavbar();
+      window.initNavbar();
 
     }
 
@@ -486,7 +478,7 @@ window.addEventListener(
     // Mobile Navigation
     if (window.initMobileNav) {
 
-        window.initMobileNav();
+      window.initMobileNav();
 
     }
 
@@ -495,12 +487,12 @@ window.addEventListener(
     // Active Navigation
     if (window.initActiveNav) {
 
-        window.initActiveNav();
+      window.initActiveNav();
 
     }
 
 
-});
+  });
 
 
 
@@ -610,13 +602,13 @@ Save Product Section
 window.saveProductSection = function (section) {
 
 
-    sessionStorage.setItem(
+  sessionStorage.setItem(
 
-        "productReturnSection",
+    "productReturnSection",
 
-        section
+    section
 
-    );
+  );
 
 
 };
@@ -632,54 +624,36 @@ Restore Product Section
 
 window.restoreProductSection = function () {
 
+  const section = sessionStorage.getItem(
+    "productReturnSection"
+  );
 
-    const section = sessionStorage.getItem(
+  if (!section) {
+    return;
+  }
 
-        "productReturnSection"
+  const target = document.getElementById(
+    section
+  );
 
+  if (target) {
+
+    window.scrollTo(
+      0,
+      target.offsetTop - 90
     );
 
+  }
 
-    if (!section) {
+  sessionStorage.removeItem(
+    "productReturnSection"
+  );
 
-        return;
-
-    }
-
-
-
-    const target = document.getElementById(
-
-        section
-
-    );
-
-
-    if (target) {
-
-
-        window.scrollTo(
-
-            0,
-
-            target.offsetTop - 90
-
-        );
-
-
-    }
-
-
-
-    sessionStorage.removeItem(
-
-        "productReturnSection"
-
-    );
-
+  document.documentElement.classList.remove(
+    "product-return-pending"
+  );
 
 };
-
 
 /* ============================
    SECTION NAV ACTIVE 二级导航
