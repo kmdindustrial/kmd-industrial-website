@@ -609,13 +609,6 @@
 }
 
 
-/* 页面平滑滚动 */
-
-html {
-
-  scroll-behavior: smooth;
-
-}
 
 /* 防止固定导航遮挡锚点 */
 

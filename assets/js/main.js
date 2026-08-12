@@ -618,8 +618,8 @@ window.saveProductSection = function (section) {
 
 
 /* =========================
-Restore Product Section
-恢复产品所属区域
+   Restore Product Section
+   恢复产品所属区域
 ========================= */
 
 window.restoreProductSection = function () {
@@ -649,11 +649,8 @@ window.restoreProductSection = function () {
     "productReturnSection"
   );
 
-  document.documentElement.classList.remove(
-    "product-return-pending"
-  );
-
 };
+
 
 /* ============================
    SECTION NAV ACTIVE 二级导航
