@@ -449,7 +449,7 @@ window.addEventListener(
     initRFQForm();
 
 
-    // Restore Product Section
+  // Restore Product Section
     if (
       (
         document.getElementById("motors")
@@ -460,7 +460,15 @@ window.addEventListener(
       window.restoreProductSection
     ) {
 
-        window.restoreProductSection();
+
+        setTimeout(() => {
+
+
+            window.restoreProductSection();
+
+
+        }, 500);
+
 
     }
 
