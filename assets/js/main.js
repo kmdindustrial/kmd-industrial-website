@@ -595,13 +595,13 @@ Save Product Section
 window.saveProductSection = function (section) {
 
 
-  sessionStorage.setItem(
+    sessionStorage.setItem(
 
-    "productReturnSection",
+        "productReturnSection",
 
-    section
+        section
 
-  );
+    );
 
 
 };
@@ -618,59 +618,52 @@ Restore Product Section
 window.restoreProductSection = function () {
 
 
-  const section = sessionStorage.getItem(
+    const section = sessionStorage.getItem(
 
-    "productReturnSection"
+        "productReturnSection"
 
-  );
-
-
-  if (!section) {
-
-    return;
-
-  }
+    );
 
 
+    if (!section) {
 
-  const target = document.getElementById(
+        return;
 
-    section
-
-  );
-
-
-  if (target) {
-
-
-    setTimeout(function () {
-
-
-      window.scrollTo(
-
-        0,
-
-        target.offsetTop - 90
-
-      );
-
-
-    }, 100);
-
-
-  }
+    }
 
 
 
-  sessionStorage.removeItem(
+    const target = document.getElementById(
 
-    "productReturnSection"
+        section
 
-  );
+    );
+
+
+    if (target) {
+
+
+        window.scrollTo(
+
+            0,
+
+            target.offsetTop - 90
+
+        );
+
+
+    }
+
+
+
+    sessionStorage.removeItem(
+
+        "productReturnSection"
+
+    );
 
 
 };
-
 
 
 /* ============================
