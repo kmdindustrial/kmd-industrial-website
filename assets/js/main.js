@@ -551,15 +551,6 @@ window.saveSection = function (section) {
 
 window.restoreSection = function () {
 
-  const params = new URLSearchParams(
-    window.location.search
-  );
-
-
-  if (params.get("return") !== "true") {
-    return;
-  }
-
 
   const section = sessionStorage.getItem(
     "returnSection"
