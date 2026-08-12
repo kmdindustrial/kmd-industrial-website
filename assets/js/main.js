@@ -449,23 +449,6 @@ window.addEventListener(
     initRFQForm();
 
 
-    // Restore Product Section
-    if (
-      (
-        document.getElementById("motors")
-        ||
-        document.getElementById("pumps")
-      )
-      &&
-      window.restoreProductSection
-    ) {
-
-      window.restoreProductSection();
-
-    }
-
-
-
     // Navbar
     if (window.initNavbar) {
 
@@ -493,6 +476,31 @@ window.addEventListener(
 
 
   });
+
+/* =========================
+Restore Product Section
+========================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    if (
+      (
+        document.getElementById("motors")
+        ||
+        document.getElementById("pumps")
+      )
+      &&
+      window.restoreProductSection
+    ) {
+
+      window.restoreProductSection();
+
+    }
+
+  }
+);
 
 
 
