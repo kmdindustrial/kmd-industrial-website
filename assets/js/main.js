@@ -432,12 +432,12 @@ function initRFQForm() {
 
 
 /* =========================
-   Normal Page Load
+Normal Page Load
 ========================= */
 
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
+window.addEventListener(
+"load",
+() => {
 
 
     initHeroCarousel();
@@ -447,6 +447,7 @@ document.addEventListener(
     initScrollReveal();
 
     initRFQForm();
+
 
     // Restore Product Section
     if (
@@ -459,35 +460,41 @@ document.addEventListener(
       window.restoreProductSection
     ) {
 
-      window.restoreProductSection();
+        window.restoreProductSection();
 
     }
+
+
 
     // Navbar
     if (window.initNavbar) {
 
-      window.initNavbar();
+        window.initNavbar();
 
     }
+
 
 
     // Mobile Navigation
     if (window.initMobileNav) {
 
-      window.initMobileNav();
+        window.initMobileNav();
 
     }
+
 
 
     // Active Navigation
     if (window.initActiveNav) {
 
-      window.initActiveNav();
+        window.initActiveNav();
 
     }
 
 
-  });
+});
+
+
 
 /* =========================
 Active Navigation
