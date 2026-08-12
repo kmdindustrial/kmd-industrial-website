@@ -505,6 +505,7 @@ window.initActiveNav = function () {
         "medium-high-voltage-motors",
         "explosion-proof-motors",
         "end-suction-pumps",
+        "double-suction-pumps",
         "multistage-pumps",
         "submersible-pumps"
     ];
