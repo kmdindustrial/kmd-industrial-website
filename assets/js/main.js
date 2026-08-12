@@ -477,30 +477,6 @@ window.addEventListener(
 
   });
 
-/* =========================
-Restore Product Section
-========================= */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-
-    if (
-      (
-        document.getElementById("motors")
-        ||
-        document.getElementById("pumps")
-      )
-      &&
-      window.restoreProductSection
-    ) {
-
-      window.restoreProductSection();
-
-    }
-
-  }
-);
 
 
 
