@@ -87,14 +87,14 @@
 
 .page-nav-links a.active {
 
-    color:#0A2463;
+  color: #0A2463;
 
 }
 
 
 .page-nav-links a.active::after {
 
-    width:100%;
+  width: 100%;
 
 }
 
@@ -149,7 +149,7 @@ html {
 
 .company-intro {
 
-  padding: 65px 0;
+  padding: 40px 0;
 
   background: #fff;
 
@@ -244,9 +244,10 @@ html {
 
 .glance-section {
 
-  padding: 65px 0;
+  padding: 40px 0;
 
   background: #f7f9fc;
+
 
 }
 
@@ -366,79 +367,61 @@ html {
    EXPERTISE
 ========================================== */
 
-
 .expertise-section {
 
-  padding: 65px 0;
+  padding: 40px 0;
 
   background: #fff;
 
 }
-
 
 
 .expertise-grid {
 
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
-  gap: 30px;
+  gap: 24px;
 
 }
 
 
-
 .expertise-card {
 
-  padding: 35px;
+  padding: 30px 26px;
 
-  border-radius: 14px;
+  border-radius: 12px;
 
   background: #fff;
 
   border: 1px solid #e8edf3;
 
-}
-
-
-
-.expertise-icon {
-
-  width: 45px;
-
-  height: 45px;
-
-  border-radius: 50%;
-
-  background: #eef5ff;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  color: #0A2463;
-
-  font-weight: 700;
-
-  margin-bottom: 20px;
+  transition: .25s ease;
 
 }
 
+
+.expertise-card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 28px rgba(13, 34, 64, .08);
+
+}
 
 
 .expertise-card h3 {
 
-  font-size: 22px;
+  font-size: 20px;
 
   color: #0A2463;
 
   margin-bottom: 12px;
 
-}
+  line-height: 1.35;
 
+}
 
 
 .expertise-card p {
@@ -447,8 +430,35 @@ html {
 
   line-height: 1.7;
 
+  font-size: 15px;
+
+  margin: 0;
+
 }
 
+
+/* Responsive */
+
+@media(max-width:992px) {
+
+  .expertise-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+
+@media(max-width:600px) {
+
+  .expertise-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
 
 
 
@@ -460,7 +470,7 @@ html {
 
 .brands-section {
 
-  padding: var(--pad-sec) 0;
+  padding: 40px 0;
 
   background: var(--bg-light);
 
@@ -825,18 +835,16 @@ html {
 
 
 /* ==========================================
-   MISSION
+   MISSION & VISION
 ========================================== */
-
 
 .mission-section {
 
-  padding: 65px 0;
+  padding: 40px 0;
 
   background: #fff;
 
 }
-
 
 
 .mission-grid {
@@ -847,18 +855,41 @@ html {
 
   gap: 50px;
 
+  align-items: stretch;
+
 }
 
 
+.mission-grid>div {
 
-.mission-grid h3 {
+  padding: 40px 40px;
 
-  font-size: 28px;
+  background: #fff;
+
+  border: 1px solid #e8edf3;
+
+  border-radius: 14px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+.mission-grid h2 {
+
+  font-size: 32px;
+
+  line-height: 1.25;
 
   color: #0A2463;
 
-}
+  margin: 0 0 20px;
 
+}
 
 
 .mission-grid p {
@@ -867,11 +898,90 @@ html {
 
   color: #444;
 
-  line-height: 1.8;
+  line-height: 1.85;
+
+  margin: 0;
 
 }
 
 
+/* ==========================================
+   OUR VALUES
+========================================== */
+
+.about-values {
+
+  padding: 40px 0;
+
+  background: #f7f9fc;
+
+}
+
+
+.values-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+}
+
+
+.value-card {
+
+  padding: 32px 25px;
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  border: 1px solid #e8edf3;
+
+  transition: .3s;
+
+}
+
+
+.value-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+
+.value-number {
+
+  color: #1b5ebc;
+
+  font-weight: 700;
+
+  font-size: 14px;
+
+}
+
+
+.value-card h3 {
+
+  color: #0A2463;
+
+  margin: 18px 0 12px;
+
+  font-size: 21px;
+
+}
+
+
+.value-card p {
+
+  color: #444;
+
+  line-height: 1.7;
+
+}
 
 
 /* ==========================================
@@ -902,6 +1012,11 @@ html {
 
   }
 
+  .values-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
 
 }
 
@@ -912,7 +1027,7 @@ html {
 
   .company-intro {
 
-    padding: 60px 0;
+    padding: 40px 0;
 
   }
 
@@ -946,6 +1061,11 @@ html {
 
   }
 
+  .values-grid {
+
+    grid-template-columns: 1fr;
+
+  }
 
   .section-title h2 {
 
