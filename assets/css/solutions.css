@@ -1,19 +1,138 @@
 /* ==========================================
-   SERVICES SECTION
+SERVICES SECTION
 ========================================== */
 
 #services {
-
-  padding: 80px 0 100px;
-
+  padding: 40px 0 40px;
   background: #fff;
+}
+
+#services .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+SERVICES SECTION TITLE
+========================================== */
+
+#services .section-title {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 45px;
+}
+
+#services .section-title h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0A2463;
+  line-height: 1.2;
+  margin: 0 0 15px;
+}
+
+#services .section-title p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ==========================================
+SERVICES GRID
+========================================== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ==========================================
+SERVICE CARD
+========================================== */
+
+.svc-card {
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  padding: 30px 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.svc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.10);
+}
+
+/* ==========================================
+SERVICE NUMBER
+========================================== */
+
+.svc-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #1b5ebc;
+  margin-bottom: 12px;
+}
+
+/* ==========================================
+SERVICE ICON
+========================================== */
+
+.svc-icon {
+  width: 50px;
+  height: 50px;
+  background: #eef5ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0A2463;
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+SERVICE TITLE
+========================================== */
+
+.svc-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0A2463;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+/* ==========================================
+SERVICE DESCRIPTION
+========================================== */
+
+.svc-desc {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==========================================
+   PROJECT PROCESS
+========================================== */
+
+.project-process-section {
+
+  padding: 40px 0 40px;
+
+  background: #f7f9fc;
 
 }
 
 
-/* 宽度 */
-
-#services .container {
+.project-process-section .container {
 
   max-width: 1200px;
 
@@ -25,105 +144,133 @@
 
 
 /* ==========================================
-   SECTION TITLE
+   PROJECT PROCESS TITLE
 ========================================== */
 
-#services .section-eyebrow {
+.project-process-section .section-title {
+
+  text-align: center;
+
+  max-width: 760px;
+
+  margin: 0 auto 55px;
+
+}
+
+
+.project-process-section .section-title .section-eyebrow {
+
+  display: block;
+
+  margin-bottom: 10px;
 
   color: #1b5ebc;
 
 }
 
 
-#services .section-title h2 {
+.project-process-section .section-title h2 {
 
-  font-size: 40px;
+  font-size: 38px;
 
   font-weight: 700;
 
   color: #0A2463;
 
-  line-height: 1.2;
+  line-height: 1.25;
+
+  margin: 0 0 15px;
 
 }
 
 
-#services .section-title p {
+.project-process-section .section-title p {
 
-  font-size: 18px;
+  font-size: 17px;
 
   color: #555;
 
   line-height: 1.8;
 
+  margin: 0;
+
 }
 
 
 /* ==========================================
-   GRID
+   PROCESS FLOW
 ========================================== */
 
-
-.services-grid {
+.process-flow {
 
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 24px;
+  gap: 0;
+
+  position: relative;
 
 }
 
+
+/* Horizontal connecting line */
+
+.process-flow::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 27px;
+
+  left: 12.5%;
+
+  right: 12.5%;
+
+  height: 1px;
+
+  background: #cfd9e6;
+
+  z-index: 0;
+
+}
 
 
 /* ==========================================
-   CARD
+   PROCESS STEP
 ========================================== */
 
+.process-step {
 
-.svc-card {
+  position: relative;
 
-  background: #fff;
+  text-align: center;
 
-  border: 1px solid #e8edf3;
+  padding: 0 25px;
 
-  border-radius: 14px;
-
-  padding: 30px 22px;
-
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
-
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
+  z-index: 1;
 
 }
-
-
-.svc-card:hover {
-
-  transform: translateY(-8px);
-
-  box-shadow: 0 16px 36px rgba(0, 0, 0, .10);
-
-}
-
 
 
 /* ==========================================
-   ICON
+   PROCESS NUMBER
 ========================================== */
 
+.process-number {
 
-.svc-icon {
+  width: 54px;
 
-  width: 50px;
+  height: 54px;
 
-  height: 50px;
+  margin: 0 auto 24px;
 
-  background: #eef5ff;
+  border-radius: 50%;
 
-  border-radius: 10px;
+  background: #0A2463;
+
+  color: #fff;
 
   display: flex;
 
@@ -131,67 +278,80 @@
 
   justify-content: center;
 
-  color: #0A2463;
+  font-size: 14px;
 
-  margin-bottom: 18px;
+  font-weight: 700;
+
+  position: relative;
+
+  z-index: 2;
+
+  box-shadow: 0 0 0 8px #f7f9fc;
 
 }
-
 
 
 /* ==========================================
-   TEXT
+   PROCESS CONTENT
 ========================================== */
 
+.process-content {
 
-.svc-num {
+  max-width: 240px;
 
-  font-size: .75rem;
-
-  font-weight: 700;
-
-  letter-spacing: .1em;
-
-  color: #1b5ebc;
-
-  margin-bottom: 12px;
+  margin: 0 auto;
 
 }
 
 
+.process-content h3 {
 
-.svc-title {
-
-  font-size: 1rem;
+  font-size: 20px;
 
   font-weight: 700;
 
   color: #0A2463;
 
-  margin-bottom: 12px;
+  line-height: 1.35;
+
+  margin: 0 0 12px;
 
 }
 
 
+.process-content p {
 
-.svc-desc {
+  font-size: 15px;
 
-  font-size: .9rem;
-
-  color: #444;
+  color: #555;
 
   line-height: 1.7;
 
+  margin: 0;
+
 }
 
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.process-step:hover .process-number {
+
+  transform: scale(1.08);
+
+  background: #1b5ebc;
+
+  transition: .25s ease;
+
+}
 
 
 /* ==========================================
    RESPONSIVE
 ========================================== */
 
-
-@media(max-width:992px) {
+@media (max-width: 992px) {
 
   .services-grid {
 
@@ -199,11 +359,48 @@
 
   }
 
+
+  .process-flow {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 50px;
+
+  }
+
+
+  .process-flow::before {
+
+    display: none;
+
+  }
+
+
 }
 
 
+@media (max-width: 768px) {
 
-@media(max-width:768px) {
+  #services {
+
+    padding: 60px 0 70px;
+
+  }
+
+
+  #services .section-title h2 {
+
+    font-size: 32px;
+
+  }
+
+
+  #services .section-title p {
+
+    font-size: 16px;
+
+  }
+
 
   .services-grid {
 
@@ -212,9 +409,53 @@
   }
 
 
-  #services .section-title h2 {
+  .project-process-section {
 
-    font-size: 32px;
+    padding: 60px 0 70px;
+
+  }
+
+
+  .project-process-section .section-title {
+
+    margin-bottom: 45px;
+
+  }
+
+
+  .project-process-section .section-title h2 {
+
+    font-size: 30px;
+
+  }
+
+
+  .project-process-section .section-title p {
+
+    font-size: 16px;
+
+  }
+
+
+  .process-flow {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+  }
+
+
+   .process-step {
+
+    padding: 0 10px;
+
+  }
+
+
+  .process-content {
+
+    max-width: 420px;
 
   }
 
