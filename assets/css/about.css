@@ -235,23 +235,9 @@ html {
 }
 
 
-
-
 /* ==========================================
-   AT A GLANCE
+   SECTION TITLE
 ========================================== */
-
-
-.glance-section {
-
-  padding: 40px 0;
-
-  background: #f7f9fc;
-
-
-}
-
-
 
 .section-title {
 
@@ -262,7 +248,6 @@ html {
   margin: 0 auto 50px;
 
 }
-
 
 
 .section-title h2 {
@@ -276,7 +261,6 @@ html {
 }
 
 
-
 .section-title p {
 
   font-size: 17px;
@@ -288,6 +272,22 @@ html {
 }
 
 
+/* ==========================================
+   AT A GLANCE
+========================================== */
+
+.glance-section {
+
+  padding: 40px 0;
+
+  background: #f7f9fc;
+
+}
+
+
+/* ==========================================
+   GLANCE GRID
+========================================== */
 
 .glance-grid {
 
@@ -295,70 +295,193 @@ html {
 
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 24px;
+  max-width: 1100px;
+
+  margin: 0 auto;
 
 }
 
 
+/* ==========================================
+   GLANCE ITEM
+========================================== */
 
 .glance-card {
 
-  background: #fff;
+  position: relative;
 
-  padding: 32px 25px;
+  padding: 10px 35px 15px;
 
-  border-radius: 14px;
+  background: transparent;
 
-  border: 1px solid #e8edf3;
+  border: none;
 
-  transition: .3s;
+  border-radius: 0;
 
-}
+  text-align: center;
 
-
-
-.glance-card:hover {
-
-  transform: translateY(-8px);
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+  transition: transform .3s ease;
 
 }
 
 
+/* ==========================================
+   VERTICAL DIVIDER
+========================================== */
+
+.glance-card:not(:last-child)::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+
+  right: 0;
+
+  width: 1px;
+
+  height: 75px;
+
+  background: #dbe2ea;
+
+}
+
+
+/* ==========================================
+   MAIN VALUE
+========================================== */
 
 .glance-card span {
 
-  color: #1b5ebc;
-
-  font-weight: 700;
-
-  font-size: 14px;
-
-}
-
-
-
-.glance-card h3 {
+  display: block;
 
   color: #0A2463;
 
-  margin: 18px 0 12px;
+  font-size: 28px;
 
-  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  margin-bottom: 10px;
 
 }
 
 
+/* ==========================================
+   LABEL
+========================================== */
+
+.glance-card h3 {
+
+  color: #1b5ebc;
+
+  margin: 0 0 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
 
 .glance-card p {
 
-  color: #444;
+  margin: 0;
 
-  line-height: 1.7;
+  color: #555;
+
+  font-size: 15px;
+
+  line-height: 1.6;
 
 }
 
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.glance-card:hover {
+
+  transform: translateY(-3px);
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px) {
+
+  .glance-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 35px;
+
+  }
+
+
+  .glance-card:nth-child(2)::after {
+
+    display: none;
+
+  }
+
+}
+
+
+@media(max-width:600px) {
+
+  .glance-grid {
+
+    grid-template-columns: 1fr;
+
+    row-gap: 30px;
+
+  }
+
+
+  .glance-card {
+
+    padding: 5px 20px 25px;
+
+  }
+
+
+  .glance-card:not(:last-child)::after {
+
+    top: auto;
+
+    right: 15%;
+
+    bottom: 0;
+
+    width: 70%;
+
+    height: 1px;
+
+  }
+
+
+  .glance-card span {
+
+    font-size: 26px;
+
+  }
+
+}
 
 
 
@@ -369,7 +492,7 @@ html {
 
 .expertise-section {
 
-  padding: 40px 0;
+  padding: 50px 0;
 
   background: #fff;
 
@@ -389,24 +512,57 @@ html {
 
 .expertise-card {
 
-  padding: 30px 26px;
+  position: relative;
 
-  border-radius: 12px;
+  padding: 30px 26px 28px;
 
   background: #fff;
 
   border: 1px solid #e8edf3;
 
-  transition: .25s ease;
+  border-radius: 12px;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+
+  overflow: hidden;
 
 }
 
 
 .expertise-card:hover {
 
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 
-  box-shadow: 0 10px 28px rgba(13, 34, 64, .08);
+  border-color: #d6e2f2;
+
+  box-shadow: 0 14px 32px rgba(13, 34, 64, .08);
+
+}
+
+
+/* 左侧强调线 */
+
+.expertise-line {
+
+  width: 38px;
+
+  height: 3px;
+
+  background: #1b5ebc;
+
+  margin-bottom: 22px;
+
+  transition: width .3s ease;
+
+}
+
+
+.expertise-card:hover .expertise-line {
+
+  width: 60px;
 
 }
 
@@ -415,24 +571,26 @@ html {
 
   font-size: 20px;
 
+  font-weight: 700;
+
   color: #0A2463;
 
-  margin-bottom: 12px;
-
   line-height: 1.35;
+
+  margin: 0 0 13px;
 
 }
 
 
 .expertise-card p {
 
-  color: #444;
-
-  line-height: 1.7;
+  margin: 0;
 
   font-size: 15px;
 
-  margin: 0;
+  color: #444;
+
+  line-height: 1.75;
 
 }
 
@@ -462,7 +620,6 @@ html {
 
 
 
-
 /* ==========================================
    BRANDS / BRAND PARTNERS
 ========================================== */
@@ -475,8 +632,6 @@ html {
   background: var(--bg-light);
 
 }
-
-
 
 
 
@@ -493,9 +648,6 @@ html {
   align-items: stretch;
 
 }
-
-
-
 
 
 
@@ -544,8 +696,6 @@ html {
 
 
 
-
-
 /* Brand Color */
 
 .brand-card.weg-card {
@@ -571,9 +721,6 @@ html {
 
 
 
-
-
-
 /* Logo Area */
 
 .brand-logo-area {
@@ -587,7 +734,6 @@ html {
   margin-bottom: 20px;
 
 }
-
 
 
 
@@ -629,9 +775,6 @@ html {
 
 
 
-
-
-
 /* Brand Text */
 
 .brand-card-name {
@@ -659,8 +802,6 @@ html {
 
 
 
-
-
 /* Description */
 
 .brand-card-desc {
@@ -672,9 +813,6 @@ html {
   line-height: 1.68;
 
 }
-
-
-
 
 
 
@@ -734,9 +872,6 @@ html {
   color: #186a3b;
 
 }
-
-
-
 
 
 
@@ -816,8 +951,6 @@ html {
 
 
 
-
-
 /* Responsive */
 
 @media(max-width:900px) {
@@ -839,68 +972,149 @@ html {
 ========================================== */
 
 .mission-section {
-
-  padding: 40px 0;
-
+  padding: 50px 0 70px;
   background: #fff;
-
 }
 
+
+/* ==========================================
+   GRID
+========================================== */
 
 .mission-grid {
-
   display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 50px;
-
-  align-items: stretch;
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
 }
 
 
-.mission-grid>div {
+/* ==========================================
+   CARD
+========================================== */
 
-  padding: 40px 40px;
+.mission-block {
+  position: relative;
+
+  padding: 42px 42px 40px;
 
   background: #fff;
 
-  border: 1px solid #e8edf3;
-
+  border: 1px solid #e1e7ef;
   border-radius: 14px;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
+  text-align: center;
 
-  display: flex;
+  box-shadow: 0 6px 24px rgba(10, 36, 99, 0.04);
 
-  flex-direction: column;
-
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
 }
 
 
-.mission-grid h2 {
+.mission-block:hover {
+  transform: translateY(-5px);
+
+  border-color: #cbd7e6;
+
+  box-shadow: 0 14px 32px rgba(10, 36, 99, 0.08);
+}
+
+
+/* ==========================================
+   SMALL LABEL
+========================================== */
+
+.mission-label {
+  display: inline-block;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: .16em;
+
+  color: #1b5ebc;
+
+  margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   DECORATIVE LINE
+========================================== */
+
+.mission-accent {
+  width: 42px;
+  height: 3px;
+
+  margin: 0 auto 22px;
+
+  background: #1b5ebc;
+
+  border-radius: 2px;
+}
+
+
+/* ==========================================
+   H2
+========================================== */
+
+.mission-block h2 {
+  margin: 0 0 18px;
 
   font-size: 32px;
+  font-weight: 700;
 
   line-height: 1.25;
 
   color: #0A2463;
-
-  margin: 0 0 20px;
-
 }
 
 
-.mission-grid p {
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.mission-block p {
+  max-width: 520px;
+
+  margin: 0 auto;
 
   font-size: 17px;
 
   color: #444;
 
   line-height: 1.85;
+}
 
-  margin: 0;
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .mission-section {
+    padding: 40px 0 60px;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .mission-block {
+    padding: 35px 25px;
+  }
+
+  .mission-block h2 {
+    font-size: 28px;
+  }
+
+  .mission-block p {
+    font-size: 16px;
+  }
 
 }
 
@@ -910,77 +1124,159 @@ html {
 ========================================== */
 
 .about-values {
-
-  padding: 40px 0;
-
+  padding: 55px 0 75px;
   background: #f7f9fc;
-
 }
 
+
+/* ==========================================
+   VALUES GRID
+========================================== */
 
 .values-grid {
-
   display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
-
 }
 
 
+/* ==========================================
+   VALUE CARD
+========================================== */
+
 .value-card {
+  position: relative;
 
-  padding: 32px 25px;
+  min-height: 230px;
 
-  border-radius: 14px;
+  padding: 32px 28px 30px;
 
   background: #fff;
 
-  border: 1px solid #e8edf3;
+  border: 1px solid #dfe6ee;
+  border-radius: 4px;
 
-  transition: .3s;
+  overflow: hidden;
 
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
 }
 
 
-.value-card:hover {
+/* ==========================================
+   TECHNICAL CORNER DETAILS
+========================================== */
 
-  transform: translateY(-8px);
+/* 左上角 */
 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+.value-card::before {
+  content: "";
 
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 28px;
+  height: 28px;
+
+  border-top: 3px solid #1b5ebc;
+  border-left: 3px solid #1b5ebc;
 }
 
+
+/* 右下角 */
+
+.value-card::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 28px;
+  height: 28px;
+
+  border-right: 3px solid #d7e0eb;
+  border-bottom: 3px solid #d7e0eb;
+}
+
+
+/* ==========================================
+   NUMBER
+========================================== */
 
 .value-number {
+  position: relative;
 
   color: #1b5ebc;
 
+  font-size: 13px;
   font-weight: 700;
 
-  font-size: 14px;
+  letter-spacing: .14em;
 
+  margin-bottom: 28px;
 }
 
 
+/* ==========================================
+   TITLE
+========================================== */
+
 .value-card h3 {
+  margin: 0 0 14px;
 
   color: #0A2463;
 
-  margin: 18px 0 12px;
-
   font-size: 21px;
+  font-weight: 700;
 
+  line-height: 1.35;
 }
 
 
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
 .value-card p {
+  margin: 0;
 
   color: #444;
 
-  line-height: 1.7;
+  font-size: 15px;
 
+  line-height: 1.75;
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.value-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #c8d5e4;
+
+  box-shadow: 0 14px 32px rgba(10, 36, 99, .08);
+}
+
+
+/* Hover: corner accents */
+
+.value-card:hover::before {
+  width: 36px;
+  height: 36px;
+}
+
+.value-card:hover::after {
+  width: 36px;
+  height: 36px;
 }
 
 
@@ -988,90 +1284,30 @@ html {
    RESPONSIVE
 ========================================== */
 
-
-@media(max-width:992px) {
-
-
-  .company-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-
-  .glance-grid {
-
-    grid-template-columns: repeat(2, 1fr);
-
-  }
-
-
-  .expertise-grid {
-
-    grid-template-columns: 1fr;
-
-  }
+@media (max-width: 992px) {
 
   .values-grid {
-
-    grid-template-columns: repeat(2, 1fr);
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
   }
 
 }
 
 
+@media (max-width: 768px) {
 
-@media(max-width:768px) {
-
-
-  .company-intro {
-
-    padding: 40px 0;
-
-  }
-
-
-  .company-text h2 {
-
-    font-size: 30px;
-
-  }
-
-
-  .glance-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-
-  .brand-showcase {
-
-    flex-direction: column;
-
-    align-items: center;
-
-  }
-
-
-  .mission-grid {
-
-    grid-template-columns: 1fr;
-
+  .about-values {
+    padding: 45px 0 60px;
   }
 
   .values-grid {
-
     grid-template-columns: 1fr;
-
+    gap: 18px;
   }
 
-  .section-title h2 {
-
-    font-size: 30px;
-
+  .value-card {
+    min-height: auto;
+    padding: 30px 25px;
   }
-
 
 }
