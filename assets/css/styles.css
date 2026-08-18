@@ -230,7 +230,7 @@
 
    z-index: 1000;
 
-   background: var(--navy);
+   background: #fdfefe;
 
    box-shadow: 0 2px 20px rgba(0, 0, 0, .3);
 
@@ -257,19 +257,16 @@
  }
 
  .nav-logo-img {
-   height: 52px;
+   height: 45px;
    width: auto;
-   padding: 4px;
-   background: rgba(255, 255, 255, 0.95);
-   border-radius: 8px;
+   display: block;
+   filter: brightness(1.12);
  }
 
  .footer-logo-img {
-   height: 52px;
+   height: 45px;
    width: auto;
-   padding: 4px;
-   background: rgba(255, 255, 255, 0.95);
-   border-radius: 8px;
+   display: block;
  }
 
  .nav-brand-text {
@@ -281,14 +278,14 @@
  .brand-name {
    font-size: 1.1rem;
    font-weight: 800;
-   color: #fff;
+   color: #0A2463;
    letter-spacing: .01em;
  }
 
  .brand-tag {
    font-size: .58rem;
    font-weight: 500;
-   color: rgba(255, 255, 255, .44);
+   color: #0A2463;
    letter-spacing: .13em;
    text-transform: uppercase;
  }
@@ -299,17 +296,17 @@
    gap: 32px;
  }
 
-  .nav-links a {
-    color: rgba(255, 255, 255, .82);
-    font-size: .875rem;
-    font-weight:500;
-    position:relative;
-    padding-bottom:3px;
-    transition:color .2s;
+ .nav-links a {
+   color: #0A2463;
+   font-size: 15px;
+   font-weight: 500;
+   position: relative;
+   padding-bottom: 3px;
+   transition: color .2s;
 
-    min-width:70px;
-    text-align:center;
-}
+   min-width: 70px;
+   text-align: center;
+ }
 
  .nav-links a::after {
    content: '';
@@ -323,7 +320,7 @@
  }
 
  .nav-links a:hover {
-   color: #fff;
+   color: #0A2463;
  }
 
  .nav-links a:hover::after {
@@ -360,7 +357,7 @@
    display: block;
    width: 24px;
    height: 2px;
-   background: #fff;
+   background: #0A2463;
    transition: all .28s;
  }
 
@@ -382,7 +379,7 @@
    top: var(--nav-h);
    left: 0;
    right: 0;
-   background: var(--navy);
+   background: #ffffff;
    padding: 16px 24px 28px;
    z-index: 999;
    box-shadow: 0 12px 30px rgba(0, 0, 0, .28);
@@ -394,7 +391,7 @@
 
  .nav-mobile a {
    display: block;
-   color: rgba(255, 255, 255, .82);
+   color: #0A2463;
    font-size: .95rem;
    padding: 13px 0;
    border-bottom: 1px solid rgba(255, 255, 255, .07);
@@ -425,19 +422,19 @@
  }
 
 
-/* ============================
+ /* ============================
    ACTIVE NAVIGATION
 ============================= */
 
-.nav-links a.active {
-    font-weight:500;
-    color:#fff;
-}
+ .nav-links a.active {
+   font-weight: 500;
+   color: #fff;
+ }
 
 
-.nav-links a.active::after {
-    width:100%;
-}
+ .nav-links a.active::after {
+   width: 100%;
+ }
 
 
 
@@ -475,6 +472,7 @@
 
 
  .footer-brand .brand-tag {
+   color: rgba(255, 255, 255, .65);
    display: block;
    margin-bottom: 13px;
  }
@@ -658,9 +656,9 @@
 
    .contact-grid {
 
-    grid-template-columns: 1fr;
+     grid-template-columns: 1fr;
 
-    gap: 44px;
+     gap: 44px;
 
    }
 
@@ -699,7 +697,7 @@
    }
 
 
-   .about-grid{
+   .about-grid {
 
      grid-template-columns: 1fr;
 
