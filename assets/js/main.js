@@ -780,6 +780,83 @@ document.addEventListener(
 );
 
 
+/* =========================================================
+   INDUSTRY PROJECT CARD FLIP
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const industryCards =
+    document.querySelectorAll(".industry-card");
+
+
+  if (!industryCards.length) {
+    return;
+  }
+
+
+  industryCards.forEach(function (card) {
+
+    const viewProjectsButton =
+      card.querySelector(".view-projects-btn");
+
+    const backButton =
+      card.querySelector(".back-to-industry");
+
+
+    /* -----------------------------------------
+       FRONT → BACK
+    ----------------------------------------- */
+
+    if (viewProjectsButton) {
+
+      viewProjectsButton.addEventListener(
+        "click",
+        function () {
+
+          /* Close other cards */
+
+          industryCards.forEach(function (otherCard) {
+
+            if (otherCard !== card) {
+              otherCard.classList.remove("is-flipped");
+            }
+
+          });
+
+
+          /* Flip current card */
+
+          card.classList.add("is-flipped");
+
+        }
+      );
+
+    }
+
+
+    /* -----------------------------------------
+       BACK → FRONT
+    ----------------------------------------- */
+
+    if (backButton) {
+
+      backButton.addEventListener(
+        "click",
+        function () {
+
+          card.classList.remove("is-flipped");
+
+        }
+      );
+
+    }
+
+  });
+
+});
+
+
 
 /* =========================================================
    INDUSTRY HASH NAVIGATION
