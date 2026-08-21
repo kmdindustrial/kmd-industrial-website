@@ -4,9 +4,9 @@
 
 .industries-section {
 
-  padding: 80px 0 80px;
+  padding: 60px 0 70px;
 
-  background: #fff;
+  background: #f8fafc;
 
 }
 
@@ -36,16 +36,76 @@
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 30px;
+  column-gap: 30px;
+
+  row-gap: 55px;
 
 }
 
 
 /* ==========================================
-   CARD
+   FLIP CARD
 ========================================== */
 
 .industry-card {
+
+  position: relative;
+
+  height: 560px;
+
+  perspective: 1400px;
+
+  scroll-margin-top: 110;
+
+}
+
+
+/* ==========================================
+   CARD INNER
+========================================== */
+
+.industry-card-inner {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform .65s cubic-bezier(.2, .7, .2, 1);
+
+}
+
+
+/* ==========================================
+   FLIPPED STATE
+========================================== */
+
+.industry-card.is-flipped .industry-card-inner {
+
+  transform: rotateY(180deg);
+
+}
+
+
+/* ==========================================
+   CARD FACE
+========================================== */
+
+.industry-card-face {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
 
   background: #fff;
 
@@ -53,26 +113,25 @@
 
   border-radius: 14px;
 
-  overflow: hidden;
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, .06);
 
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .05);
+  backface-visibility: hidden;
 
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
+  -webkit-backface-visibility: hidden;
 
 }
 
 
 /* ==========================================
-   HOVER
+   FRONT
 ========================================== */
 
-.industry-card:hover {
+.industry-card-front {
 
-  transform: translateY(-8px);
+  display: flex;
 
-  box-shadow: 0 16px 36px rgba(0, 0, 0, .10);
+  flex-direction: column;
 
 }
 
@@ -85,29 +144,28 @@
 
   width: 100%;
 
-  aspect-ratio: 16 / 9;
+  height: 220px;
 
   object-fit: cover;
 
   display: block;
 
-  transition: transform .6s ease;
-
-}
-
-
-.industry-card:hover .industry-image {
-
-  transform: scale(1.05);
+  flex-shrink: 0;
 
 }
 
 
 /* ==========================================
-   CONTENT
+   FRONT CONTENT
 ========================================== */
 
 .industry-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
 
   padding: 26px;
 
@@ -118,11 +176,11 @@
 
   margin: 0 0 14px;
 
-  font-size: 26px;
+  color: #0A2463;
+
+  font-size: 24px;
 
   font-weight: 700;
-
-  color: #0A2463;
 
   line-height: 1.3;
 
@@ -135,9 +193,9 @@
 
   color: #444;
 
-  font-size: 16px;
+  font-size: 15px;
 
-  line-height: 1.75;
+  line-height: 1.7;
 
 }
 
@@ -154,7 +212,7 @@
 
   gap: 8px;
 
-  margin-top: 20px;
+  margin-top: 18px;
 
 }
 
@@ -169,7 +227,7 @@
 
   color: #0A2463;
 
-  font-size: 13px;
+  font-size: 12px;
 
   font-weight: 600;
 
@@ -179,37 +237,343 @@
 
 
 /* ==========================================
-   RESPONSIVE — TABLET
+   VIEW PROJECTS
+========================================== */
+
+.view-projects-btn {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 16px 0 0;
+
+  border: 0;
+
+  border-top: 1px solid #e8edf3;
+
+  background: transparent;
+
+  color: #0A2463;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+}
+
+
+.view-projects-btn strong {
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+}
+
+
+.project-arrow {
+
+  font-size: 18px;
+
+  line-height: 1;
+
+  transition:
+    transform .2s ease;
+
+}
+
+
+.view-projects-btn:hover .project-arrow {
+
+  transform: translateX(4px);
+
+}
+
+
+/* ==========================================
+   BACK
+========================================== */
+
+.industry-card-back {
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 25px 26px;
+
+  transform: rotateY(180deg);
+
+}
+
+
+/* ==========================================
+   BACK HEADER
+========================================== */
+
+.project-back-header {
+
+  flex-shrink: 0;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #e8edf3;
+
+}
+
+
+.project-back-header h2 {
+
+  margin: 0;
+
+  color: #0A2463;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+}
+
+
+.project-industry-name {
+
+  display: block;
+
+  margin-top: 5px;
+
+  color: #7b8494;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+}
+
+
+/* ==========================================
+   PROJECT LIST
+========================================== */
+
+.project-list {
+
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+
+  padding-right: 6px;
+
+}
+
+
+/* ==========================================
+   PROJECT SCROLLBAR
+========================================== */
+
+.project-list::-webkit-scrollbar {
+
+  width: 4px;
+
+}
+
+
+.project-list::-webkit-scrollbar-track {
+
+  background: transparent;
+
+}
+
+
+.project-list::-webkit-scrollbar-thumb {
+
+  background: #d5dae2;
+
+  border-radius: 4px;
+
+}
+
+
+/* ==========================================
+   PROJECT ITEM
+========================================== */
+
+.project-item {
+
+  position: relative;
+
+  padding: 14px 0 14px 15px;
+
+  border-bottom: 1px solid #edf0f4;
+
+}
+
+
+.project-item:last-child {
+
+  border-bottom: none;
+
+}
+
+
+.project-item::before {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 21px;
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #0A2463;
+
+}
+
+
+.project-item strong {
+
+  display: block;
+
+  color: #1b2433;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+
+}
+
+
+.project-item span {
+
+  display: block;
+
+  margin-top: 4px;
+
+  color: #7b8494;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+}
+
+
+/* ==========================================
+   BACK FOOTER
+========================================== */
+
+.project-back-footer {
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #e8edf3;
+
+}
+
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-to-industry {
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #7b8494;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+
+}
+
+
+.back-to-industry:hover {
+
+  color: #0A2463;
+
+  transform: translateX(-3px);
+
+}
+
+
+/* ==========================================
+   TABLET
 ========================================== */
 
 @media (max-width: 992px) {
 
+  .industries-section {
+
+    padding: 55px 0 65px;
+
+  }
+
+
   .industries-grid {
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
-    gap: 30px;
+    column-gap: 30px;
 
-  }
-
-
-  .industry-content {
-
-    padding: 24px;
+    row-gap: 40px;
 
   }
 
 
-  .industry-content h2 {
+  .industry-card {
 
-    font-size: 24px;
+    height: 570px;
 
   }
 
 
-  .industry-content p {
+  .industry-image {
 
-    font-size: 16px;
+    height: 220px;
 
   }
 
@@ -217,14 +581,14 @@
 
 
 /* ==========================================
-   RESPONSIVE — MOBILE
+   MOBILE
 ========================================== */
 
 @media (max-width: 768px) {
 
   .industries-section {
 
-    padding: 60px 0 80px;
+    padding: 45px 0 55px;
 
   }
 
@@ -234,6 +598,20 @@
     grid-template-columns: 1fr;
 
     gap: 24px;
+
+  }
+
+
+  .industry-card {
+
+    height: 560px;
+
+  }
+
+
+  .industry-image {
+
+    height: 210px;
 
   }
 
@@ -254,7 +632,9 @@
 
   .industry-content p {
 
-    font-size: 16px;
+    font-size: 15px;
+
+    line-height: 1.7;
 
   }
 
@@ -274,4 +654,102 @@
 
   }
 
+
+  .industry-card-back {
+
+    padding: 22px;
+
+  }
+
+
+  .project-back-header h2 {
+
+    font-size: 21px;
+
+  }
+
+
+  .project-item strong {
+
+    font-size: 13px;
+
+  }
+
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+  .industries-section {
+
+    padding: 40px 0 50px;
+
+  }
+
+
+  .industry-card {
+
+    height: 550px;
+
+  }
+
+
+  .industry-image {
+
+    height: 200px;
+
+  }
+
+
+  .industry-content {
+
+    padding: 20px;
+
+  }
+
+
+  .industry-content h2 {
+
+    font-size: 21px;
+
+  }
+
+
+  .industry-content p {
+
+    font-size: 14px;
+
+  }
+
+
+  .industry-card-back {
+
+    padding: 20px;
+
+  }
+
+}
+
+
+/* ==========================================
+   HASH NAVIGATION LOADING
+   Prevent top-of-page flash before anchor positioning
+========================================== */
+
+html.hash-loading body {
+  visibility: hidden;
+}
+
+
+/* ==========================================
+   ANCHOR SCROLL OFFSET
+   Prevent fixed navbar from covering sections
+========================================== */
+
+html {
+  scroll-padding-top: 110px;
 }

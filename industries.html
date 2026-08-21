@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+<script>
+    if (window.location.hash) {
+      document.documentElement.classList.add("hash-loading");
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Industrial Applications | Kamaide Technology (KMD)</title>
@@ -15,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/industries.css">
   <link rel="canonical" href="https://www.kmdequipment.com/industries.html">
+  
 
 </head>
 
@@ -186,8 +192,8 @@
       <h1>Industries We Serve</h1>
 
       <p>
-        KMD provides reliable electric motor and pump solutions
-        for demanding industrial applications worldwide.
+        Proven motor and pump solutions across power, mining,
+        chemical, environmental, water, and process industries.
       </p>
 
     </div>
@@ -199,83 +205,180 @@
   <!-- ============================
      INDUSTRIES
 ============================= -->
+
   <section class="industries-section">
+
     <div class="container">
 
       <div class="industries-grid">
 
-        <!-- Oil & Gas -->
-        <article class="industry-card" id="oil-gas">
 
-          <img src="assets/images/industry-oil.webp" alt="Oil and gas industrial facility" class="industry-image">
+        <!-- ==================================================
+           POWER GENERATION
+      =================================================== -->
 
-          <div class="industry-content">
-
-            <h2>Oil &amp; Gas</h2>
-
-            <p>
-              Reliable motor and pump solutions for upstream, midstream,
-              and downstream oil &amp; gas operations, including demanding
-              and hazardous-area applications.
-            </p>
-
-            <div class="industry-tags">
-              <span>Motors</span>
-              <span>Pumps</span>
-              <span>Hazardous Areas</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- Water & Wastewater -->
-        <article class="industry-card" id="water-wastewater">
-
-          <img src="assets/images/industry-water.webp" alt="Water and wastewater treatment facility"
-            class="industry-image">
-
-          <div class="industry-content">
-
-            <h2>Water &amp; Wastewater</h2>
-
-            <p>
-              Efficient motor and pump solutions for municipal and industrial
-              water supply, treatment, wastewater handling, and pumping systems.
-            </p>
-
-            <div class="industry-tags">
-              <span>Water Treatment</span>
-              <span>Wastewater</span>
-              <span>Pumping Systems</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- Power Generation -->
         <article class="industry-card" id="power-generation">
 
-          <img src="assets/images/industry-power.webp" alt="Power generation industrial facility"
-            class="industry-image">
+          <div class="industry-card-inner">
 
-          <div class="industry-content">
 
-            <h2>Power Generation</h2>
+            <!-- FRONT -->
 
-            <p>
-              High-performance motor and pump solutions for power plants,
-              cooling systems, water circulation, and auxiliary equipment
-              worldwide.
-            </p>
+            <div class="industry-card-face industry-card-front">
 
-            <div class="industry-tags">
-              <span>Power Plants</span>
-              <span>Cooling Systems</span>
-              <span>Water Circulation</span>
+              <img src="assets/images/industry-power.webp" alt="Power generation industrial facility"
+                class="industry-image">
+
+              <div class="industry-content">
+
+                <h2>Power Generation</h2>
+
+                <p>
+                  High-performance motor and pump solutions for power plants,
+                  cooling systems, water circulation, and auxiliary equipment
+                  worldwide.
+                </p>
+
+                <div class="industry-tags">
+
+                  <span>Power Plants</span>
+
+                  <span>Cooling Systems</span>
+
+                  <span>Water Circulation</span>
+
+                </div>
+
+
+                <button type="button" class="view-projects-btn" aria-label="View Power Generation projects">
+
+                  <span>
+                    <strong>6</strong> Selected Projects
+                  </span>
+
+                  <span class="project-arrow">
+                    →
+                  </span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <div class="industry-card-face industry-card-back">
+
+
+              <div class="project-back-header">
+
+                <h2>
+                  Selected Projects
+                </h2>
+
+                <span class="project-industry-name">
+                  Power Generation
+                </span>
+
+              </div>
+
+
+              <div class="project-list">
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Qasim Port 2 × 660 MW
+                  </strong>
+
+                  <span>
+                    Power Project · Pakistan
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    GNPK 2 × 135 MW
+                  </strong>
+
+                  <span>
+                    Power Project · Philippines
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Basra Gas Turbine Combined-Cycle
+                  </strong>
+
+                  <span>
+                    Power Project · Iraq
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    GNPD 2 × 660 MW
+                  </strong>
+
+                  <span>
+                    Coal-Fired Power Project · Philippines
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Uzbekistan Power Plant Project
+                  </strong>
+
+                  <span>
+                    Uzbekistan
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    PAMPA Project
+                  </strong>
+
+                  <span>
+                    Brazil
+                  </span>
+
+                </div>
+
+
+              </div>
+
+
+              <div class="project-back-footer">
+
+                <button type="button" class="back-to-industry">
+                  ← Back
+                </button>
+
+              </div>
+
+
             </div>
 
           </div>
@@ -283,25 +386,175 @@
         </article>
 
 
-        <!-- Mining & Cement -->
-        <article class="industry-card" id="mining-cement">
 
-          <img src="assets/images/industry-mining.webp" alt="Mining and cement industrial facility"
-            class="industry-image">
+        <!-- ==================================================
+           MINING & MINERALS
+      =================================================== -->
 
-          <div class="industry-content">
+        <article class="industry-card" id="mining-minerals">
 
-            <h2>Mining &amp; Cement</h2>
+          <div class="industry-card-inner">
 
-            <p>
-              Heavy-duty motors and pumps designed for demanding mining
-              and cement operations, including material handling and process systems.
-            </p>
 
-            <div class="industry-tags">
-              <span>Heavy-Duty Motors</span>
-              <span>Process Pumps</span>
-              <span>Material Handling</span>
+            <!-- FRONT -->
+
+            <div class="industry-card-face industry-card-front">
+
+              <img src="assets/images/industry-mining.webp" alt="Mining and mineral processing facility"
+                class="industry-image">
+
+              <div class="industry-content">
+
+                <h2>
+                  Mining &amp; Minerals
+                </h2>
+
+                <p>
+                  Heavy-duty motor and pump solutions for demanding mining
+                  and mineral processing operations, including material
+                  handling and process systems.
+                </p>
+
+                <div class="industry-tags">
+
+                  <span>Heavy-Duty Motors</span>
+
+                  <span>Process Pumps</span>
+
+                  <span>Mineral Processing</span>
+
+                </div>
+
+
+                <button type="button" class="view-projects-btn" aria-label="View Mining and Minerals projects">
+
+                  <span>
+                    <strong>6</strong> Selected Projects
+                  </span>
+
+                  <span class="project-arrow">
+                    →
+                  </span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <div class="industry-card-face industry-card-back">
+
+
+              <div class="project-back-header">
+
+                <h2>
+                  Selected Projects
+                </h2>
+
+                <span class="project-industry-name">
+                  Mining &amp; Minerals
+                </span>
+
+              </div>
+
+
+              <div class="project-list">
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Mubarak Ore Processing Plant
+                  </strong>
+
+                  <span>
+                    10.26 Million TPA
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Toromocho Copper Mine
+                  </strong>
+
+                  <span>
+                    Peru
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Duobaoshan Copper Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Aurizona Mining Project
+                  </strong>
+
+                  <span>
+                    Brazil
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Xudonggou Mining Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Mozambique Mining Project
+                  </strong>
+
+                  <span>
+                    Mozambique
+                  </span>
+
+                </div>
+
+
+              </div>
+
+
+              <div class="project-back-footer">
+
+                <button type="button" class="back-to-industry">
+                  ← Back
+                </button>
+
+              </div>
+
+
             </div>
 
           </div>
@@ -309,61 +562,637 @@
         </article>
 
 
-        <!-- Manufacturing -->
-        <article class="industry-card" id="manufacturing">
 
-          <img src="assets/images/industry-manufacturing.jpg" alt="Manufacturing industrial facility"
-            class="industry-image">
+        <!-- ==================================================
+           CHEMICAL & PETROCHEMICAL
+      =================================================== -->
 
-          <div class="industry-content">
-
-            <h2>Manufacturing</h2>
-
-            <p>
-              Reliable motor and pump solutions for continuous production,
-              process machinery, material handling, and industrial utility systems.
-            </p>
-
-            <div class="industry-tags">
-              <span>Industrial Motors</span>
-              <span>Process Pumps</span>
-              <span>Production Systems</span>
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <!-- Chemical & Petrochemical -->
         <article class="industry-card" id="chemical-petrochemical">
 
-          <img src="assets/images/industry-chemical.webp" alt="Chemical and petrochemical industrial facility"
-            class="industry-image">
+          <div class="industry-card-inner">
 
-          <div class="industry-content">
 
-            <h2>Chemical &amp; Petrochemical</h2>
+            <!-- FRONT -->
 
-            <p>
-              Safe and efficient motor and pump solutions for corrosive,
-              hazardous, and process-intensive environments.
-            </p>
+            <div class="industry-card-face industry-card-front">
 
-            <div class="industry-tags">
-              <span>Hazardous Areas</span>
-              <span>Process Pumps</span>
-              <span>Corrosive Media</span>
+              <img src="assets/images/industry-chemical.webp" alt="Chemical and petrochemical industrial facility"
+                class="industry-image">
+
+              <div class="industry-content">
+
+                <h2>
+                  Chemical &amp; Petrochemical
+                </h2>
+
+                <p>
+                  Safe and efficient motor and pump solutions for corrosive,
+                  hazardous, and process-intensive industrial environments.
+                </p>
+
+                <div class="industry-tags">
+
+                  <span>Hazardous Areas</span>
+
+                  <span>Process Pumps</span>
+
+                  <span>Chemical Processing</span>
+
+                </div>
+
+
+                <button type="button" class="view-projects-btn" aria-label="View Chemical and Petrochemical projects">
+
+                  <span>
+                    <strong>6</strong> Selected Projects
+                  </span>
+
+                  <span class="project-arrow">
+                    →
+                  </span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <div class="industry-card-face industry-card-back">
+
+
+              <div class="project-back-header">
+
+                <h2>
+                  Selected Projects
+                </h2>
+
+                <span class="project-industry-name">
+                  Chemical &amp; Petrochemical
+                </span>
+
+              </div>
+
+
+              <div class="project-list">
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Zhejiang Petrochemical Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Wanhua Chemical Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Hengli Petrochemical Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    BASF Zhanjiang Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Yulong Petrochemical Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Shenghong Petrochemical Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+              </div>
+
+
+              <div class="project-back-footer">
+
+                <button type="button" class="back-to-industry">
+                  ← Back
+                </button>
+
+              </div>
+
+
             </div>
 
           </div>
 
         </article>
+
+
+
+        <!-- ==================================================
+           ENVIRONMENTAL & WASTE MANAGEMENT
+      =================================================== -->
+
+        <article class="industry-card" id="environmental-waste">
+
+          <div class="industry-card-inner">
+
+
+            <!-- FRONT -->
+
+            <div class="industry-card-face industry-card-front">
+
+              <img src="assets/images/industry-environmental.webp" alt="Environmental and waste management facility"
+                class="industry-image">
+
+              <div class="industry-content">
+
+                <h2>
+                  Environmental &amp; Waste Management
+                </h2>
+
+                <p>
+                  Motor and pump solutions for waste treatment,
+                  waste-to-energy facilities, and supporting
+                  environmental infrastructure.
+                </p>
+
+                <div class="industry-tags">
+
+                  <span>Waste-to-Energy</span>
+
+                  <span>Waste Treatment</span>
+
+                  <span>Process Systems</span>
+
+                </div>
+
+                <button type="button" class="view-projects-btn"
+                  aria-label="View Environmental and Waste Management projects">
+
+                  <span>
+                    <strong>3</strong> Selected Projects
+                  </span>
+
+                  <span class="project-arrow">
+                    →
+                  </span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <div class="industry-card-face industry-card-back">
+
+
+              <div class="project-back-header">
+
+                <h2>
+                  Selected Projects
+                </h2>
+
+                <span class="project-industry-name">
+                  Environmental &amp; Waste Management
+                </span>
+
+              </div>
+
+
+              <div class="project-list">
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Songjiang Tianma Waste-to-Energy Project
+                  </strong>
+
+                  <span>
+                    Shanghai, China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Laogang–Jinshan Waste-to-Energy Project
+                  </strong>
+
+                  <span>
+                    Shanghai, China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Chaoyang Integrated Waste Treatment Project
+                  </strong>
+
+                  <span>
+                    Beijing, China
+                  </span>
+
+                </div>
+
+
+              </div>
+
+
+              <div class="project-back-footer">
+
+                <button type="button" class="back-to-industry">
+                  ← Back
+                </button>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ==================================================
+           PULP & PAPER
+      =================================================== -->
+
+        <article class="industry-card" id="pulp-paper">
+
+          <div class="industry-card-inner">
+
+
+            <!-- FRONT -->
+
+            <div class="industry-card-face industry-card-front">
+
+              <img src="assets/images/industry-paper.webp" alt="Pulp and paper manufacturing facility"
+                class="industry-image">
+
+              <div class="industry-content">
+
+                <h2>
+                  Pulp &amp; Paper
+                </h2>
+
+                <p>
+                  Reliable motor and pump solutions for pulp and paper
+                  production, process systems, material handling,
+                  and industrial utilities.
+                </p>
+
+                <div class="industry-tags">
+
+                  <span>Pulp Processing</span>
+
+                  <span>Paper Production</span>
+
+                  <span>Process Systems</span>
+
+                </div>
+
+
+                <button type="button" class="view-projects-btn" aria-label="View Pulp and Paper projects">
+
+                  <span>
+                    <strong>4</strong> Selected Projects
+                  </span>
+
+                  <span class="project-arrow">
+                    →
+                  </span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <div class="industry-card-face industry-card-back">
+
+
+              <div class="project-back-header">
+
+                <h2>
+                  Selected Projects
+                </h2>
+
+                <span class="project-industry-name">
+                  Pulp &amp; Paper
+                </span>
+
+              </div>
+
+
+              <div class="project-list">
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Ningbo Asia Pulp &amp; Paper Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Shanying Huazhong Paperboard Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Nine Dragons Paper Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Nanning Phoenix Paper Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+              </div>
+
+
+              <div class="project-back-footer">
+
+                <button type="button" class="back-to-industry">
+                  ← Back
+                </button>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ==================================================
+           WATER & WASTEWATER
+      =================================================== -->
+
+        <article class="industry-card" id="water-wastewater">
+
+          <div class="industry-card-inner">
+
+
+            <!-- FRONT -->
+
+            <div class="industry-card-face industry-card-front">
+
+              <img src="assets/images/industry-water.webp" alt="Water and wastewater treatment facility"
+                class="industry-image">
+
+              <div class="industry-content">
+
+                <h2>
+                  Water &amp; Wastewater
+                </h2>
+
+                <p>
+                  Efficient motor and pump solutions for water supply,
+                  treatment, wastewater handling, pumping stations,
+                  and water infrastructure.
+                </p>
+
+                <div class="industry-tags">
+
+                  <span>Water Treatment</span>
+
+                  <span>Wastewater</span>
+
+                  <span>Pumping Systems</span>
+
+                </div>
+
+
+                <button type="button" class="view-projects-btn" aria-label="View Water and Wastewater projects">
+
+                  <span>
+                    <strong>5</strong> Selected Projects
+                  </span>
+
+                  <span class="project-arrow">
+                    →
+                  </span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- BACK -->
+
+            <div class="industry-card-face industry-card-back">
+
+
+              <div class="project-back-header">
+
+                <h2>
+                  Selected Projects
+                </h2>
+
+                <span class="project-industry-name">
+                  Water &amp; Wastewater
+                </span>
+
+              </div>
+
+
+              <div class="project-list">
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Shuyang Water Services Phase II Project
+                  </strong>
+
+                  <span>
+                    China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Kafue River Water Supply Project
+                  </strong>
+
+                  <span>
+                    Zambia
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Caotan Wastewater Treatment Plant
+                  </strong>
+
+                  <span>
+                    Xi'an, China
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Tai Po Fresh Water Pumping Station
+                  </strong>
+
+                  <span>
+                    Hong Kong
+                  </span>
+
+                </div>
+
+
+                <div class="project-item">
+
+                  <strong>
+                    Tsuen Wan Water Treatment Works
+                  </strong>
+
+                  <span>
+                    Hong Kong
+                  </span>
+
+                </div>
+
+
+              </div>
+
+
+              <div class="project-back-footer">
+
+                <button type="button" class="back-to-industry">
+                  ← Back
+                </button>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </article>
+
 
       </div>
 
     </div>
+
   </section>
+
 
 
   <!-- ============================
@@ -375,12 +1204,13 @@
     <div class="container">
 
       <h2>
-        Need Equipment for Your Industry?
+        Have an Industrial Project in Mind?
       </h2>
 
       <p>
-        KMD provides reliable motor and pump solutions
-        for demanding industrial applications worldwide.
+        Tell us about your application, operating conditions,
+        and equipment requirements. Our team will help identify
+        the right motor or pump solution.
       </p>
 
       <a href="contact.html" class="btn btn-primary">
@@ -432,6 +1262,7 @@
     })();
   </script>
   <!--End of Tawk.to Script-->
+
 
 </body>
 

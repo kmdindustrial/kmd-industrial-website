@@ -779,3 +779,25 @@ document.addEventListener(
   initSectionNav
 );
 
+
+
+/* =========================================================
+   INDUSTRY HASH NAVIGATION
+   Reveal page after browser anchor positioning
+========================================================= */
+
+window.addEventListener("load", function () {
+
+  if (!window.location.hash) {
+    return;
+  }
+
+  requestAnimationFrame(function () {
+
+    document.documentElement.classList.remove(
+      "hash-loading"
+    );
+
+  });
+
+});
