@@ -935,7 +935,7 @@ html {
 ========================================== */
 
 .mission-section {
-  padding: 20px 0 40px;
+  padding: 20px 0 60px;
   background: #fff;
 }
 
@@ -947,7 +947,6 @@ html {
 .mission-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
 }
 
 
@@ -958,53 +957,18 @@ html {
 .mission-block {
   position: relative;
 
-  padding: 32px 58px 58px;
+  padding: 25px 40px 38px;
 
   background: #fff;
 }
 
 
-/* Vertical Divider */
-
-.mission-block:first-child {
-  border-right: 1px solid #dfe5ed;
-}
-
-
-
 /* ==========================================
-   WATERMARK
+   CENTER DIVIDER
 ========================================== */
 
-.mission-block::after {
-  position: absolute;
-
-  right: 26px;
-  bottom: 8px;
-
-  font-size: 78px;
-  font-weight: 700;
-  font-style: italic;
-  line-height: 1;
-
-  letter-spacing: -0.06em;
-
-  color: rgba(10, 36, 99, 0.045);
-
-  pointer-events: none;
-  user-select: none;
-
-  white-space: nowrap;
-}
-
-
-.mission-block:first-child::after {
-  content: "MISSION";
-}
-
-
-.mission-block:last-child::after {
-  content: "VISION";
+.mission-block:first-child {
+  border-right: 1px solid #e5e9ef;
 }
 
 
@@ -1014,9 +978,9 @@ html {
 
 .mission-block h2 {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
-  margin: 0 0 20px;
+  margin: 0 0 18px;
 
   font-size: 34px;
   font-weight: 700;
@@ -1032,15 +996,64 @@ html {
 
 .mission-block p {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
-  max-width: 560px;
+  max-width: 580px;
 
   margin: 0;
 
   font-size: 16px;
   color: var(--text-mid);
-  line-height: 1.85;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   WATERMARK
+========================================== */
+
+.mission-block::after {
+  position: absolute;
+
+  bottom: -25px;
+
+  font-size: 76px;
+  font-weight: 700;
+  font-style: italic;
+
+  line-height: 1;
+  letter-spacing: -0.06em;
+
+  color: rgba(10, 36, 99, 0.04);
+
+  pointer-events: none;
+  user-select: none;
+
+  white-space: nowrap;
+}
+
+
+/* ==========================================
+   MISSION WATERMARK
+========================================== */
+
+.mission-block:first-child::after {
+  content: "MISSION";
+
+  left: 10px;
+  font-size: 66px;
+}
+
+
+/* ==========================================
+   VISION WATERMARK
+========================================== */
+
+.mission-block:last-child::after {
+  content: "VISION";
+
+  right: 10px;
+  font-size: 76px;
 }
 
 
@@ -1051,7 +1064,7 @@ html {
 @media (max-width: 768px) {
 
   .mission-section {
-    padding: 45px 0 60px;
+    padding: 35px 0 45px;
   }
 
 
@@ -1061,32 +1074,47 @@ html {
 
 
   .mission-block {
-    padding: 40px 28px 48px;
+    padding: 25px 28px 40px;
   }
 
 
+  /* Divider becomes horizontal */
+
   .mission-block:first-child {
     border-right: none;
-    border-bottom: 1px solid #dfe5ed;
+    border-bottom: 1px solid #e5e9ef;
   }
 
 
   .mission-block h2 {
     font-size: 28px;
+    margin-bottom: 16px;
   }
 
 
   .mission-block p {
+    max-width: none;
+
     font-size: 16px;
     line-height: 1.8;
   }
 
 
-  .mission-block::after {
-    right: 16px;
-    bottom: 8px;
+  /* Mission watermark — left */
 
-    font-size: 56px;
+  .mission-block:first-child::after {
+    left: 8px;
+    right: auto;
+    font-size: 52px;
+  }
+
+
+  /* Vision watermark — right */
+
+  .mission-block:last-child::after {
+    left: auto;
+    right: 8px;
+    font-size: 58px;
   }
 
 }
