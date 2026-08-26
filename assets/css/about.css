@@ -450,7 +450,7 @@ html {
 
 
 /* ==========================================
-   EXPERTISE
+   WHAT WE DO / EXPERTISE
 ========================================== */
 
 .expertise-section {
@@ -935,7 +935,7 @@ html {
 ========================================== */
 
 .mission-section {
-  padding: 50px 0 70px;
+  padding: 20px 0 40px;
   background: #fff;
 }
 
@@ -947,91 +947,82 @@ html {
 .mission-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px;
+  gap: 0;
 }
 
 
 /* ==========================================
-   CARD
+   CONTENT BLOCK
 ========================================== */
 
 .mission-block {
   position: relative;
 
-  padding: 42px 42px 40px;
+  padding: 32px 58px 58px;
 
   background: #fff;
-
-  border: 1px solid #e1e7ef;
-  border-radius: 14px;
-
-  text-align: center;
-
-  box-shadow: 0 6px 24px rgba(10, 36, 99, 0.04);
-
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease,
-    border-color .3s ease;
 }
 
 
-.mission-block:hover {
-  transform: translateY(-5px);
+/* Vertical Divider */
 
-  border-color: #cbd7e6;
-
-  box-shadow: 0 14px 32px rgba(10, 36, 99, 0.08);
+.mission-block:first-child {
+  border-right: 1px solid #dfe5ed;
 }
+
 
 
 /* ==========================================
-   SMALL LABEL
+   WATERMARK
 ========================================== */
 
-.mission-label {
-  display: inline-block;
+.mission-block::after {
+  position: absolute;
 
-  font-size: 12px;
+  right: 26px;
+  bottom: 8px;
+
+  font-size: 78px;
   font-weight: 700;
+  font-style: italic;
+  line-height: 1;
 
-  letter-spacing: .16em;
+  letter-spacing: -0.06em;
 
-  color: #1b5ebc;
+  color: rgba(10, 36, 99, 0.045);
 
-  margin-bottom: 12px;
+  pointer-events: none;
+  user-select: none;
+
+  white-space: nowrap;
+}
+
+
+.mission-block:first-child::after {
+  content: "MISSION";
+}
+
+
+.mission-block:last-child::after {
+  content: "VISION";
 }
 
 
 /* ==========================================
-   DECORATIVE LINE
-========================================== */
-
-.mission-accent {
-  width: 42px;
-  height: 3px;
-
-  margin: 0 auto 22px;
-
-  background: #1b5ebc;
-
-  border-radius: 2px;
-}
-
-
-/* ==========================================
-   H2
+   TITLE
 ========================================== */
 
 .mission-block h2 {
-  margin: 0 0 18px;
+  position: relative;
+  z-index: 1;
 
-  font-size: 38px;
+  margin: 0 0 20px;
+
+  font-size: 34px;
   font-weight: 700;
-
   line-height: 1.25;
 
-  color:  var(--text-dark);
+  color: var(--text-dark);
 }
 
 
@@ -1040,14 +1031,15 @@ html {
 ========================================== */
 
 .mission-block p {
-  max-width: 520px;
+  position: relative;
+  z-index: 1;
 
-  margin: 0 auto;
+  max-width: 560px;
 
-  font-size: 17px;
+  margin: 0;
 
-  color: #444;
-
+  font-size: 16px;
+  color: var(--text-mid);
   line-height: 1.85;
 }
 
@@ -1059,24 +1051,42 @@ html {
 @media (max-width: 768px) {
 
   .mission-section {
-    padding: 40px 0 60px;
+    padding: 45px 0 60px;
   }
+
 
   .mission-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
   }
 
+
   .mission-block {
-    padding: 35px 25px;
+    padding: 40px 28px 48px;
   }
+
+
+  .mission-block:first-child {
+    border-right: none;
+    border-bottom: 1px solid #dfe5ed;
+  }
+
 
   .mission-block h2 {
     font-size: 28px;
   }
 
+
   .mission-block p {
     font-size: 16px;
+    line-height: 1.8;
+  }
+
+
+  .mission-block::after {
+    right: 16px;
+    bottom: 8px;
+
+    font-size: 56px;
   }
 
 }
