@@ -176,7 +176,7 @@
 
   margin: 0 0 14px;
 
-  color: #0A2463;
+  color: var(--text-dark);
 
   font-size: 24px;
 

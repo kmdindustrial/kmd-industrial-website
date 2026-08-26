@@ -146,92 +146,55 @@ html {
    COMPANY INTRO
 ========================================== */
 
-
 .company-intro {
-
-  padding: 40px 0;
-
+  padding: 50px 0;
   background: #fff;
-
 }
-
 
 .company-grid {
-
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 70px;
-
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
   align-items: center;
-
 }
-
-
 
 .section-tag {
-
   font-size: 13px;
-
   font-weight: 700;
-
   letter-spacing: .15em;
-
   color: #1b5ebc;
-
 }
-
-
 
 .company-text h2 {
-
   font-size: 40px;
-
-  color: #0A2463;
-
+  color: var(--text-dark);
   margin: 15px 0 25px;
-
   line-height: 1.25;
-
 }
-
-
 
 .company-text p {
-
   font-size: 17px;
-
   color: #444;
-
   line-height: 1.8;
-
   margin-bottom: 18px;
-
 }
 
-
+.company-image {
+  max-width: 520px;
+  width: 100%;
+  justify-self: end;
+}
 
 .company-image img {
-
   width: 100%;
-
   border-radius: 14px;
-
   display: block;
-
 }
 
-
-
 .text-link {
-
   color: #0A2463;
-
   font-weight: 600;
-
   text-decoration: none;
-
 }
 
 
@@ -254,7 +217,7 @@ html {
 
   font-size: 38px;
 
-  color: #0A2463;
+  color: var(--text-dark);
 
   margin-bottom: 15px;
 
@@ -1063,12 +1026,12 @@ html {
 .mission-block h2 {
   margin: 0 0 18px;
 
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 700;
 
   line-height: 1.25;
 
-  color: #0A2463;
+  color:  var(--text-dark);
 }
 
 
