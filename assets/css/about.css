@@ -388,18 +388,12 @@ html {
 @media(max-width:992px) {
 
   .glance-grid {
-
     grid-template-columns: repeat(2, 1fr);
-
     row-gap: 35px;
-
   }
 
-
   .glance-card:nth-child(2)::after {
-
     display: none;
-
   }
 
 }
@@ -407,45 +401,58 @@ html {
 
 @media(max-width:600px) {
 
-  .glance-grid {
+  /* COMPANY INTRO */
 
-    grid-template-columns: 1fr;
-
-    row-gap: 30px;
-
+  .company-intro {
+    padding: 40px 0;
   }
 
+  .company-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .company-text h2 {
+    font-size: 30px;
+    margin: 12px 0 20px;
+  }
+
+  .company-text p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .company-image {
+    max-width: none;
+    width: 100%;
+    justify-self: stretch;
+  }
+
+
+  /* AT A GLANCE */
+
+  .glance-grid {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
 
   .glance-card {
-
     padding: 5px 20px 25px;
-
   }
-
 
   .glance-card:not(:last-child)::after {
-
     top: auto;
-
     right: 15%;
-
     bottom: 0;
-
     width: 70%;
-
     height: 1px;
-
   }
 
-
   .glance-card span {
-
     font-size: 26px;
-
   }
 
 }
-
 
 
 
@@ -1064,7 +1071,7 @@ html {
 @media (max-width: 768px) {
 
   .mission-section {
-    padding: 35px 0 45px;
+    padding: 20px 0 40px;
   }
 
 
@@ -1074,7 +1081,7 @@ html {
 
 
   .mission-block {
-    padding: 25px 28px 40px;
+    padding: 18px 24px 55px;
   }
 
 
@@ -1086,38 +1093,44 @@ html {
   }
 
 
+  /* Title */
+
   .mission-block h2 {
     font-size: 28px;
     margin-bottom: 16px;
   }
 
 
+  /* Description */
+
   .mission-block p {
     max-width: none;
-
     font-size: 16px;
     line-height: 1.8;
   }
 
 
-  /* Mission watermark — left */
+  /* Mission watermark */
 
   .mission-block:first-child::after {
     left: 8px;
     right: auto;
-    font-size: 52px;
+    bottom: 8px;
+    font-size: 48px;
   }
 
 
-  /* Vision watermark — right */
+  /* Vision watermark */
 
   .mission-block:last-child::after {
     left: auto;
     right: 8px;
-    font-size: 58px;
+    bottom: 8px;
+    font-size: 52px;
   }
 
 }
+
 
 
 /* ==========================================
