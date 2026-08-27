@@ -24,7 +24,7 @@ SERVICES SECTION TITLE
 }
 
 #services .section-title h2 {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.2;
@@ -390,7 +390,7 @@ SERVICE DESCRIPTION
 
   #services .section-title h2 {
 
-    font-size: 32px;
+    font-size: 28px;
 
   }
 
@@ -425,7 +425,7 @@ SERVICE DESCRIPTION
 
   .project-process-section .section-title h2 {
 
-    font-size: 30px;
+    font-size: 28px;
 
   }
 
