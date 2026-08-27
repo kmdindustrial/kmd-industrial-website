@@ -28,50 +28,44 @@
 
  .s1 .slide-bg {
 
-    background:
-    linear-gradient(
-        90deg,
-        rgba(13,34,64,.85),
-        rgba(13,34,64,.25)
-    ),
-    url("../images/hero-1.webp");
+   background:
+     linear-gradient(90deg,
+       rgba(13, 34, 64, .85),
+       rgba(13, 34, 64, .25)),
+     url("../images/hero-1.webp");
 
-    background-size:cover;
-    background-position:center;
+   background-size: cover;
+   background-position: center;
 
-}
+ }
 
 
-.s2 .slide-bg {
+ .s2 .slide-bg {
 
-    background:
-    linear-gradient(
-        90deg,
-        rgba(13,34,64,.85),
-        rgba(13,34,64,.25)
-    ),
-    url("../images/hero-2.webp");
+   background:
+     linear-gradient(90deg,
+       rgba(13, 34, 64, .85),
+       rgba(13, 34, 64, .25)),
+     url("../images/hero-2.webp");
 
-    background-size:cover;
-    background-position:center;
+   background-size: cover;
+   background-position: center;
 
-}
+ }
 
 
-.s3 .slide-bg {
+ .s3 .slide-bg {
 
-    background:
-    linear-gradient(
-        90deg,
-        rgba(13,34,64,.85),
-        rgba(13,34,64,.25)
-    ),
-    url("../images/hero-3.webp");
+   background:
+     linear-gradient(90deg,
+       rgba(13, 34, 64, .85),
+       rgba(13, 34, 64, .25)),
+     url("../images/hero-3.webp");
 
-    background-size:cover;
-    background-position:center;
+   background-size: cover;
+   background-position: center;
 
-}
+ }
 
  .slide-bg::after {
    content: '';
@@ -116,9 +110,9 @@
 
  .slide-headline {
    color: #fff;
-   font-size:48px;
-   font-weight:700;
-   line-height:1.15;
+   font-size: 48px;
+   font-weight: 700;
+   line-height: 1.15;
    margin-bottom: 17px;
  }
 
@@ -176,18 +170,33 @@
  }
 
  .c-dot {
-   width: 8px;
-   height: 8px;
+   width: 32px;
+   height: 32px;
+   padding: 0;
+   border: none;
+   border-radius: 50%;
+   background: transparent;
+   position: relative;
+ }
+
+ .c-dot::before {
+   content: "";
+   position: absolute;
+   width: 9px;
+   height: 9px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
    border-radius: 50%;
    background: rgba(255, 255, 255, .3);
-   border: none;
    transition: all .25s;
  }
 
- .c-dot.active {
+ .c-dot.active::before {
    background: #fff;
-   transform: scale(1.35);
+   transform: translate(-50%, -50%) scale(1.35);
  }
+
 
  /* ============================
    HOME PAGE
@@ -260,11 +269,11 @@
  }
 
 
-.home-about-brand .btn {
+ .home-about-brand .btn {
 
-   margin-top:20px;
+   margin-top: 20px;
 
-}
+ }
 
 
  .about-brand-grid {
@@ -406,139 +415,139 @@
 
 
 
-/* ============================
+ /* ============================
    INDUSTRIES
 ============================= */
 
-.home-industries {
-    padding: 40px 0;
-}
+ .home-industries {
+   padding: 40px 0;
+ }
 
-.home-industry-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+ .home-industry-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+ }
 
-.home-industry-card {
-    position: relative;
+ .home-industry-card {
+   position: relative;
 
-    min-height: 76px;
-    padding: 18px 24px;
+   min-height: 76px;
+   padding: 18px 24px;
 
-    background: #ffffff;
+   background: #ffffff;
 
-    border: 1px solid #e5e8ef;
-    border-radius: 6px;
+   border: 1px solid #e5e8ef;
+   border-radius: 6px;
 
-    /* Clearly visible soft gray shadow */
-    box-shadow:
-        0 8px 22px rgba(0, 0, 0, 0.12),
-        0 3px 8px rgba(0, 0, 0, 0.06);
+   /* Clearly visible soft gray shadow */
+   box-shadow:
+     0 8px 22px rgba(0, 0, 0, 0.12),
+     0 3px 8px rgba(0, 0, 0, 0.06);
 
-    cursor: pointer;
+   cursor: pointer;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-}
+   transition:
+     transform 0.25s ease,
+     box-shadow 0.25s ease,
+     border-color 0.25s ease;
+ }
 
 
-/* ============================
+ /* ============================
    LINK
 ============================= */
 
-.home-industry-card a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ .home-industry-card a {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
-    width: 100%;
-    height: 100%;
+   width: 100%;
+   height: 100%;
 
-    color: #222;
-    text-decoration: none;
+   color: #222;
+   text-decoration: none;
 
-    font-weight: 600;
-}
+   font-weight: 600;
+ }
 
 
-/* ============================
+ /* ============================
    ICON + TITLE
 ============================= */
 
-.industry-content {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+ .industry-content {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
 
-    gap: 9px;
-}
+   gap: 9px;
+ }
 
-.industry-icon {
-    width: 19px;
-    height: 19px;
+ .industry-icon {
+   width: 19px;
+   height: 19px;
 
-    flex: 0 0 19px;
+   flex: 0 0 19px;
 
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.6;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
+   fill: none;
+   stroke: currentColor;
+   stroke-width: 1.6;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+ }
 
 
-/* ============================
+ /* ============================
    BOTTOM-RIGHT ARROW
 ============================= */
 
-.home-industry-card::after {
-    content: "→";
+ .home-industry-card::after {
+   content: "→";
 
-    position: absolute;
+   position: absolute;
 
-    right: 16px;
-    bottom: 9px;
+   right: 16px;
+   bottom: 9px;
 
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1;
+   font-size: 1rem;
+   font-weight: 500;
+   line-height: 1;
 
-    color: #7d858f;
+   color: #7d858f;
 
-    transition:
-        transform 0.25s ease,
-        color 0.25s ease;
-}
+   transition:
+     transform 0.25s ease,
+     color 0.25s ease;
+ }
 
-.home-industry-card:hover::after {
-    color: #4f5863;
-    transform: translateX(4px);
-}
-
-
+ .home-industry-card:hover::after {
+   color: #4f5863;
+   transform: translateX(4px);
+ }
 
 
-/* ============================
+
+
+ /* ============================
    HOVER
 ============================= */
 
-.home-industry-card:hover {
-    transform: translateY(-3px);
+ .home-industry-card:hover {
+   transform: translateY(-3px);
 
-    border-color: #d8dde5;
+   border-color: #d8dde5;
 
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.16),
-        0 4px 10px rgba(0, 0, 0, 0.07);
-}
+   box-shadow:
+     0 12px 30px rgba(0, 0, 0, 0.16),
+     0 4px 10px rgba(0, 0, 0, 0.07);
+ }
 
-.home-industry-card:hover::after {
-    color: #6f7782;
-    transform: translateX(4px);
-}
+ .home-industry-card:hover::after {
+   color: #6f7782;
+   transform: translateX(4px);
+ }
 
  /* ============================
    HOME INDUSTRIES LINKS
