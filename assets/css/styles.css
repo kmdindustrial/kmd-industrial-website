@@ -327,23 +327,6 @@
    width: 100%;
  }
 
- .nav-links .n-cta {
-   background: var(--blue-mid);
-   color: #fff !important;
-   padding: 8px 20px;
-   border-radius: var(--radius);
-   font-weight: 600 !important;
-   transition: background .2s;
- }
-
- .nav-links .n-cta:hover {
-   background: var(--blue-dark);
- }
-
- .nav-links .n-cta::after {
-   display: none !important;
- }
-
  .nav-toggle {
    display: none;
    flex-direction: column;
