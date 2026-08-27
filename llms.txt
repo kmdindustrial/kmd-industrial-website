@@ -1,0 +1,35 @@
+# Kamaide Technology (KMD)
+
+> Kamaide Technology (KMD) is an industrial equipment company specializing in electric motors, industrial pumps, and technical solutions for international industrial applications and projects.
+
+KMD provides industrial equipment solutions for power generation, mining and minerals, chemical and petrochemical, environmental and waste management, pulp and paper, and water and wastewater applications.
+
+## Main Pages
+
+* [Home](https://kmdequipment.com/): Company overview and industrial equipment solutions.
+* [Products](https://kmdequipment.com/products.html): Electric motors and industrial pumps.
+* [Solutions](https://kmdequipment.com/solutions.html): Technical solutions and application support.
+* [Industries](https://kmdequipment.com/industries.html): Industrial applications and selected project experience.
+* [About](https://kmdequipment.com/about.html): Company and brand information.
+* [Contact](https://kmdequipment.com/contact.html): Project inquiries and contact information.
+
+## Electric Motors
+
+* [Low Voltage Motors](https://kmdequipment.com/low-voltage-motors.html): Low voltage industrial electric motors.
+* [Medium & High Voltage Motors](https://kmdequipment.com/medium-high-voltage-motors.html): Medium and high voltage electric motors.
+* [Explosion Proof Motors](https://kmdequipment.com/explosion-proof-motors.html): Explosion-proof motors for hazardous area applications.
+
+## Industrial Pumps
+
+* [End Suction Pumps](https://kmdequipment.com/end-suction-pumps.html): End suction centrifugal pumps for industrial applications.
+* [Double Suction Pumps](https://kmdequipment.com/double-suction-pumps.html): Double suction centrifugal pumps.
+* [Submersible Pumps](https://kmdequipment.com/submersible-pumps.html): Submersible pumps for industrial and water-related applications.
+
+## Industries
+
+* [Power Generation](https://kmdequipment.com/industries.html): Equipment applications in power generation.
+* [Mining & Minerals](https://kmdequipment.com/industries.html): Equipment applications in mining and minerals processing.
+* [Chemical & Petrochemical](https://kmdequipment.com/industries.html): Equipment applications in chemical and petrochemical industries.
+* [Environmental & Waste Management](https://kmdequipment.com/industries.html): Equipment applications in environmental and waste management.
+* [Pulp & Paper](https://kmdequipment.com/industries.html): Equipment applications in pulp and paper production.
+* [Water & Wastewater](https://kmdequipment.com/industries.html): Equipment applications in water and wastewater treatment.
