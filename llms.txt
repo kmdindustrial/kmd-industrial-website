@@ -6,30 +6,30 @@ KMD provides industrial equipment solutions for power generation, mining and min
 
 ## Main Pages
 
-* [Home](https://kmdequipment.com/): Company overview and industrial equipment solutions.
-* [Products](https://kmdequipment.com/products.html): Electric motors and industrial pumps.
-* [Solutions](https://kmdequipment.com/solutions.html): Technical solutions and application support.
-* [Industries](https://kmdequipment.com/industries.html): Industrial applications and selected project experience.
-* [About](https://kmdequipment.com/about.html): Company and brand information.
-* [Contact](https://kmdequipment.com/contact.html): Project inquiries and contact information.
+* [Home](https://www.kmdequipment.com/): Company overview and industrial equipment solutions.
+* [Products](https://www.kmdequipment.com/products): Electric motors and industrial pumps.
+* [Solutions](https://www.kmdequipment.com/solutions): Technical solutions and application support.
+* [Industries](https://www.kmdequipment.com/industries): Industrial applications and selected project experience.
+* [About](https://www.kmdequipment.com/about): Company and brand information.
+* [Contact](https://www.kmdequipment.com/contact): Project inquiries and contact information.
 
 ## Electric Motors
 
-* [Low Voltage Motors](https://kmdequipment.com/low-voltage-motors.html): Low voltage industrial electric motors.
-* [Medium & High Voltage Motors](https://kmdequipment.com/medium-high-voltage-motors.html): Medium and high voltage electric motors.
-* [Explosion Proof Motors](https://kmdequipment.com/explosion-proof-motors.html): Explosion-proof motors for hazardous area applications.
+* [Low Voltage Motors](https://www.kmdequipment.com/low-voltage-motors): Low voltage industrial electric motors.
+* [Medium & High Voltage Motors](https://www.kmdequipment.com/medium-high-voltage-motors): Medium and high voltage electric motors.
+* [Explosion Proof Motors](https://www.kmdequipment.com/explosion-proof-motors): Explosion-proof motors for hazardous area applications.
 
 ## Industrial Pumps
 
-* [End Suction Pumps](https://kmdequipment.com/end-suction-pumps.html): End suction centrifugal pumps for industrial applications.
-* [Double Suction Pumps](https://kmdequipment.com/double-suction-pumps.html): Double suction centrifugal pumps.
-* [Submersible Pumps](https://kmdequipment.com/submersible-pumps.html): Submersible pumps for industrial and water-related applications.
+* [End Suction Pumps](https://www.kmdequipment.com/end-suction-pumps): End suction centrifugal pumps for industrial applications.
+* [Double Suction Pumps](https://www.kmdequipment.com/double-suction-pumps): Double suction centrifugal pumps.
+* [Submersible Pumps](https://www.kmdequipment.com/submersible-pumps): Submersible pumps for industrial and water-related applications.
 
 ## Industries
 
-* [Power Generation](https://kmdequipment.com/industries.html): Equipment applications in power generation.
-* [Mining & Minerals](https://kmdequipment.com/industries.html): Equipment applications in mining and minerals processing.
-* [Chemical & Petrochemical](https://kmdequipment.com/industries.html): Equipment applications in chemical and petrochemical industries.
-* [Environmental & Waste Management](https://kmdequipment.com/industries.html): Equipment applications in environmental and waste management.
-* [Pulp & Paper](https://kmdequipment.com/industries.html): Equipment applications in pulp and paper production.
-* [Water & Wastewater](https://kmdequipment.com/industries.html): Equipment applications in water and wastewater treatment.
+* [Power Generation](https://www.kmdequipment.com/industries): Equipment applications in power generation.
+* [Mining & Minerals](https://www.kmdequipment.com/industries): Equipment applications in mining and minerals processing.
+* [Chemical & Petrochemical](https://www.kmdequipment.com/industries): Equipment applications in chemical and petrochemical industries.
+* [Environmental & Waste Management](https://www.kmdequipment.com/industries): Equipment applications in environmental and waste management.
+* [Pulp & Paper](https://www.kmdequipment.com/industries): Equipment applications in pulp and paper production.
+* [Water & Wastewater](https://www.kmdequipment.com/industries): Equipment applications in water and wastewater treatment.
