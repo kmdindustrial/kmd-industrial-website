@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  /* =========================
-     Load Footer
-  ========================= */
+    /* =========================
+      Load Footer
+    ========================= */
 
 
-  const footerContainer =
-    document.getElementById("footer-container");
+    const footerContainer =
+      document.getElementById("footer-container");
 
 
 
-  if (footerContainer) {
+    if (footerContainer) {
 
 
-    fetch("components/footer.html")
+      fetch("components/footer.html")
 
 
       .then(response => {

@@ -386,7 +386,7 @@ function initRFQForm() {
 
 
           window.location.href =
-            "/thank-you.html";
+            "/thank-you";
 
 
         } else {
